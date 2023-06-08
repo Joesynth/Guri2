@@ -1,0 +1,125 @@
+
+
+
+/* NOVO do "guri_d"*/
+/* NOVO do "guri_d"*/
+/* NOVO do "guri_d"*/
+
+
+#newDIV2 {
+  //background-color: lightyellow;
+  //margin-top: 1.5em;
+  //border-radius: 6em 3em 0em 0em;
+  //height: 40%;
+}
+
+#p5 {
+	position: absolute;
+	top: 2em;
+	left: -32%;
+	font-size: 3.5em;
+	padding: 1em;
+}
+
+#p6 {
+	position: absolute;
+	top: 3em;
+	left: 22%;
+	color: whitesmoke;
+	min-width: 6em;
+	font-size: 1.5em;
+	font-weight: bold;
+	box-shadow: inset 0 0 9px black, inset 0px 0 22px gray;
+	border-radius: 0.5em;
+	padding: 0.2em 1em;
+}
+
+#p7 {
+	position: absolute;
+	top: 2em;
+	left: 22%;
+	color: white;
+	font-size: 1.2em;
+}
+
+
+
+/* NOVO do "guri_d"*/
+/* NOVO do "guri_d"*/
+/* NOVO do "guri_d"*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: lightslategray;
+	font-family: "mv boli", sans-serif;
+	margin: 0;
+	//width: 100vw;
+	height: 100vh;
+}
+
+#btL, #btR {
+	position: absolute;
+	top: 44%;
+	background-color: white;
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+}
+
+#btL {
+	border-radius: 0em 0.5em 0.5em 0em; 
+}
+
+
+#btR {
+	border-radius: 0.5em 0em 0em 0.5em; 
+	right: 0;
+}
+
+#btL button, #btR button {
+  width: 2.9em;
+  height: 2.9em;
+}
+
+#boTxt1, #boTxt2 {
+	text-transform: uppercase;
+	font-size: 0.7em;
+}
+
+#boTxt1 {
+	text-align: right;
+	margin-right: 0.5em;
+}
+
+#boTxt2 {
+	text-align: left;
+	margin-left: 0.5em;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	border-radius: 2em;
+}
+
+
+
+/* Media Queries
+--------------------------------------------- [DAKI PRA BAIXO É O LAYOUT DISPLAY CELULAR] */
+@media all and (max-width : 768px) {
+
+			img {
+				height: 26%;
+				margin-top: 2em;
+				border-radius: 0;
+				border-top: 1.5em solid gray;
+				border-bottom: 1.5em solid gray;
+			}
+
+}
+
+
