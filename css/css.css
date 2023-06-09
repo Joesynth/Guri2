@@ -26,20 +26,20 @@
 	top: 3em;
 	left: 22%;
 	color: whitesmoke;
-	min-width: 6em;
-	font-size: 1.5em;
+	min-width: 5em;
+	font-size: 1.4em;
 	font-weight: bold;
-	box-shadow: inset 0 0 9px black, inset 0px 0 22px gray;
+	box-shadow: inset 0 0 9px black, inset 0px 0 66px gray;
 	border-radius: 0.5em;
-	padding: 0.2em 1em;
+	padding: 0.2em 0.5em;
 }
 
 #p7 {
 	position: absolute;
-	top: 2em;
+	top: 2.1em;
 	left: 22%;
 	color: white;
-	font-size: 1.2em;
+	font-size: 1em;
 }
 
 
@@ -81,8 +81,8 @@ body {
 }
 
 #btL button, #btR button {
-  width: 2.9em;
-  height: 2.9em;
+  width: 3.1em;
+  height: 3.1em;
 }
 
 #boTxt1, #boTxt2 {
@@ -110,7 +110,8 @@ img {
 
 /* Media Queries
 --------------------------------------------- [DAKI PRA BAIXO É O LAYOUT DISPLAY CELULAR] */
-@media all and (max-width : 768px) {
+/* Abaixo, em @media, antes estava em 768px mas coloquei em 480px da minha cabeça (pois não me lembro de ter visto este número sendo usado antes). */
+@media all and (max-width : 480px) {
 
 			img {
 				height: 26%;
@@ -119,7 +120,13 @@ img {
 				border-top: 1.5em solid gray;
 				border-bottom: 1.5em solid gray;
 			}
+					
+			.bts img {
+				height: 1em;		
+				width: 1em;		
+			}
 
 }
+
 
 
