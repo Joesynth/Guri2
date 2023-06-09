@@ -29,7 +29,7 @@ return false;
 }
 
 function autoRun () {
-	setInterval("changeImage(1)",1000);
+	setInterval("changeImage(1)",7000);
 }
 
 
