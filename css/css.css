@@ -122,8 +122,10 @@ img {
 			}
 					
 			.bts img {
-				height: 1em;		
-				width: 1em;		
+				height: 1.2em;		
+				width: 1.2em;
+				border: 0em; /* está propriedade e valor é importante porque se não houver prevalecerá o valor de border-top e bottom declarado em img acima. */
+				margin: 0em; /* se não houver este valor valerá o valor de margin-top acima na outra declaração de img. */
 			}
 
 }
