@@ -122,10 +122,14 @@ img {
 			}
 					
 			.bts img {
-				height: 1.2em;		
+				height: 1.2em;		/* tamanho da img de logo nos botões; exatamente onde não foi possível pôr um emoji. */
 				width: 1.2em;
 				border: 0em; /* está propriedade e valor é importante porque se não houver prevalecerá o valor de border-top e bottom declarado em img acima. */
 				margin: 0em; /* se não houver este valor valerá o valor de margin-top acima na outra declaração de img. */
+			}
+			
+			aside button {
+				font-size: 1em;			
 			}
 
 }
