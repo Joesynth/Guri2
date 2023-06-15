@@ -386,33 +386,33 @@ var cssVR = [
 
 
 var emojP = [
-"🏠️","📞️","📧️","🔊️","🎤️","🎧️","⚙️","✏️",
-"▶️","⏸️","⏹️","⭐️","⏰️","🔋️",
-"⌨️","🖱️","🔑️","🛡️","💳️",
+"🏠️ house","📞️ telephone","📧️ mail","🔊️ speaker","🎤️ microphone","🎧️ headphone","⚙️ gear","✏️ pen",
+"▶️ play","⏸️ pause","⏹️ stop","⭐️ star","⏰️ clock","🔋️ battery",
+"⌨️ keyboard","🖱️ mouse","🔑️ key","🛡️ shield","💳️ card",
 
-"⚠️","🛒️","☁️","🖼️",
-"❌️","⭕️","✔️","©️",
-"🔢️","🔤️","⬆️","⬇️",
-"♀️","♂️",
-"➰️","⏩️","⏭️","🎮️",
+"⚠️ warning","🛒️ shopping","☁️ cloud","🖼️ picture",
+"❌️ cross","⭕️ circle","✔️ check","©️ copyright",
+"🔢️ number","🔤️ letter","⬆️ up arrow","⬇️ down arrow",
+"♀️ female","♂️ male",
+"➰️ loop","⏩️ forward","⏭️ next","🎮️ game",
 
-"💾️","💽️","🖥️","🎵️","🎶️","🎼️","📈️","📊️",
-"🌐️","🌍️","🌎️","🌏️","🔗️","🔆️","🎛️","🎚️",
+"💾️ disk","💽️ disk","🖥️ computer","🎵️ music","🎶️ music","🎼️ music","📈️ chart","📊️ chart",
+"🌐️ globe","🌍️ globe","🌎️ globe","🌏️ globe","🔗️ link","🔆️ bright","🎛️ knob","🎚️ slider",
 ];
 
 var emojR = [
-"house","telephone","mail","speaker","microphone","headphone","gear","pen",
-"play","pause","stop","star","clock","battery",
-"keyboard","mouse","key","shield"," card",
+"","","","","","","","",
+"","","","","","",
+"","","",""," ",
 
-"warning","shopping","cloud","picture",
-"cross","circle","check","copyright",
-"number","letter","up arrow","down arrow",
-"female","male",
-"loop","forward","next","game",
+"","","","",
+"","","","",
+"","","","",
+"","",
+"","","","",
 
-"disk","disk","computer","music","music","music","chart","chart",
-"globe","globe","globe","globe","link","bright","knob","slider",
+"","","","","","","","",
+"","","","","","","","",
 ];
 
 
