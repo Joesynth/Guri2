@@ -1,6 +1,5 @@
 
 
-
 /* NOVO do "guri_d"*/
 /* NOVO do "guri_d"*/
 /* NOVO do "guri_d"*/
@@ -108,6 +107,8 @@ img {
 
 
 
+
+
 /* Media Queries
 --------------------------------------------- [DAKI PRA BAIXO É O LAYOUT DISPLAY CELULAR] */
 /* Abaixo, em @media, antes estava em 768px mas coloquei em 480px da minha cabeça (pois não me lembro de ter visto este número sendo usado antes). */
@@ -127,7 +128,11 @@ img {
 				border: 0em; /* está propriedade e valor é importante porque se não houver prevalecerá o valor de border-top e bottom declarado em img acima. */
 				margin: 0em; /* se não houver este valor valerá o valor de margin-top acima na outra declaração de img. */
 			}
-			
+
+			.bts button {
+				border-radius: 0px;
+			}			
+
 			aside button {
 				font-size: 1em;			
 			}
