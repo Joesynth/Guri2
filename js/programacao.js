@@ -268,9 +268,9 @@
 "teto","piso, chão","absolute (absoluto)","aleatório",
 
 "potência (power)","square root (raiz quadrada)","",
-"comprimento","","",
-"","","","",
-"","",
+"comprimento","índice de","juntar",
+"","classificar,organizar","reverter","fatiar,cortar",
+"emendar","empurrar",
 ];
 
 	var cssReEx = [	// UPDATE: CAMPO N EXISTE NO DISPLAY
@@ -302,7 +302,6 @@
 ".fillStyle",
 "onclick","style",
 // outros
-"Button Object","Audio object",
 ];
 
 
@@ -323,7 +322,6 @@
 "preencher (fill)",
 "ao clicar","estilo",
 // outros
-"","",
 ];
 
 	var css3ReEx = [ //UPDATE = ESTE CAMPO N EXISTE
@@ -493,12 +491,14 @@ var objeP = [
 "window","navigator","screen","location","localStorage","sessionStorage","history","frames",
 "document","xmlHttpRequest",
 "Math","Array","Date","String",
+"Button Object","Audio object",
 ];
 
 var objeR = [
 "","","","","","","","",
 "","",
 "","","","",
+"","",
 ];
 
 var reseP = [
@@ -532,6 +532,27 @@ var reseR = [
 "","","","","","","",
 "","","","",
 ];
+
+
+/* O "S" em "cssS" significa pSeudo-class. */
+var cssSP = [
+":active",":checked",":fullscreen",":modal",":enabled",":disabled",":placeholder-shown",":required",
+":optional",":user-invalid",":lang()",":link",":visited",":target",":playing",":paused",
+":root",":empty",":first-child",":last-child",":only-child",":hover",":focus",":focus-visible",
+//Pseudo-elements
+"::after","::before","::backdrop","::first-letter","::first-line","::placeholder",
+];
+
+
+var cssSR = [
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","",
+];
+
+
+
 
 /*
 ############################################################
@@ -658,6 +679,12 @@ document.querySelector('#p5').innerHTML = html2R[i];
 	    speech.voice = speechSynthesis.getVoices()[3];
 	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
 	    speechSynthesis.speak(speech);
+	}
+
+		function cssS () {
+var i = `${ran(html2P.length)}`;
+document.querySelector('#p6').innerHTML= cssSP[i];
+document.querySelector('#p7').innerHTML = cssSR[i];
 	}
 
 	function cssC() {
@@ -859,14 +886,14 @@ document.querySelector('#p5').innerHTML = html2R[i];
 		document.getElementById("html3").addEventListener("click",html3);
 		document.querySelector('#html3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "ATRIBUTO";});
 		document.getElementById("css").addEventListener("click",css);
-		document.querySelector('#css').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "JS - NATIVO";});
+		document.querySelector('#css').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "NATIVO - MÉTODO - PROPRIEDADE";});
 
 		document.getElementById("css2").addEventListener("click",css2);
 		document.querySelector('#css2').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "CSS";});
 		document.getElementById("jsdo").addEventListener("click",jsdo);
-		document.querySelector('#jsdo').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "JS - DOM";});
+		document.querySelector('#jsdo').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "DOM - MÉTODO - PROPRIEDADE";});
 		document.getElementById("js3").addEventListener("click",js3);
-		document.querySelector('#js3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "JS - BOM";});
+		document.querySelector('#js3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "BOM - MÉTODO - PROPRIEDADE";});
 		document.getElementById("even").addEventListener("click",even);
 		document.querySelector('#even').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "JS - EVENTOS";});
 		document.getElementById("obje").addEventListener("click",obje);
@@ -885,6 +912,9 @@ document.querySelector('#p5').innerHTML = html2R[i];
 
 		document.getElementById("mark").addEventListener("click",mark);
 		document.querySelector('#mark').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "MARKDOWN";});
+
+		document.getElementById("cssS").addEventListener("click",cssS);
+		document.querySelector('#cssS').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "PSEUDO-CLASS - PSEUDO-ELEMENTS";});
 
 	}
 window.addEventListener("load",addEvents);
