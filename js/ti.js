@@ -607,6 +607,51 @@ var RedRcReEx = [	//UPDATE
 "Um modelo abstrato ou uma ideia que visa ser um padrão. Descreve as regras que padronizam os diversos componentes em uma rede para que os dispositivos consigam se comunicar (como que cada parte da rede deve trabalhar). Fabricantes por exemplo a usa para desenvolverem seus produtos. Desenvolvimento anos 70 pela ISO.",
 ];
 
+
+var emojP = [
+"🏠️ house","📞️ telephone","📧️ mail","🔊️ speaker","🎤️ microphone","🎧️ headphone","⚙️ gear","✏️ pen",
+"▶️ play","⏸️ pause","⏹️ stop","⭐️ star","⏰️ clock","🔋️ battery",
+"⌨️ keyboard","🖱️ mouse","🔑️ key","🛡️ shield","💳️ card",
+
+"⚠️ warning","🛒️ shopping","☁️ cloud","🖼️ picture",
+"❌️ cross","⭕️ circle","✔️ check","©️ copyright",
+"🔢️ number","🔤️ letter","⬆️ up arrow","⬇️ down arrow",
+"♀️ female","♂️ male",
+"➰️ loop","⏩️ forward","⏭️ next","🎮️ game",
+
+"💾️ disk","💽️ disk","🖥️ computer","🎵️ music","🎶️ music","🎼️ music","📈️ chart","📊️ chart",
+"🌐️ globe","🌍️ globe","🌎️ globe","🌏️ globe","🔗️ link","🔆️ bright","🎛️ knob","🎚️ slider",
+];
+
+var emojR = [
+"","","","","","","","",
+"","","","","","",
+"","","",""," ",
+
+"","","","",
+"","","","",
+"","","","",
+"","",
+"","","","",
+
+"","","","","","","","",
+"","","","","","","","",
+];
+
+var markP = [
+"#","##","######","-",
+"*","**","|-",">",
+"[]()","![]()","1.",
+];
+
+var markR = [
+"title","title 2","title 6","list",
+"italic","bold","table","blockquote",
+"link","image","list",
+];
+
+
+
 /*
 ############################################################
 ############################################################
@@ -816,8 +861,43 @@ document.querySelector('#p5').innerHTML = c[i]; // c é o array emoji.
 	    speechSynthesis.speak(speech);	
 	}
 
+	function emoj() {
+	//	var rndCor = Math.floor(Math.random()*(cssP.length));
+	//document.getElementById('p2').innerHTML = cssP[rndCor];
+	//document.getElementById('p3').innerHTML = cssR[rndCor];
+		 var rndCor = Math.floor(Math.random()*(emojP.length));
+		 var rndCor2 =  emojP[rndCor];
+		
+	    document.getElementById('p7').innerHTML = emojR[rndCor];      // text2 display r
+	    
+	    var text = document.getElementById('p6');                      // text display p
+	    var speech = new SpeechSynthesisUtterance();
+	    speech.rate = 0.7;  // 0.1 to 10
+	    speech.pitch = 1;   // 0 to 2
+	    speech.volume = 1;   // 0 to 1
+	    speech.voice = speechSynthesis.getVoices()[3];
+	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
+	    speechSynthesis.speak(speech);
+	}
 
-
+	function mark() {
+	//	var rndCor = Math.floor(Math.random()*(cssP.length));
+	//document.getElementById('p2').innerHTML = cssP[rndCor];
+	//document.getElementById('p3').innerHTML = cssR[rndCor];
+		 var rndCor = Math.floor(Math.random()*(markP.length));
+		 var rndCor2 =  markP[rndCor];
+		
+	    document.getElementById('p7').innerHTML = markR[rndCor];      // text2 display r
+	    
+	    var text = document.getElementById('p6');                      // text display p
+	    var speech = new SpeechSynthesisUtterance();
+	    speech.rate = 0.7;  // 0.1 to 10
+	    speech.pitch = 1;   // 0 to 2
+	    speech.volume = 1;   // 0 to 1
+	    speech.voice = speechSynthesis.getVoices()[3];
+	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
+	    speechSynthesis.speak(speech);
+	}
 
 
 
@@ -854,6 +934,13 @@ document.querySelector('#p5').innerHTML = c[i]; // c é o array emoji.
 		document.querySelector('#segu3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "SAFETY";});		
 		
 		document.getElementById("rede3").addEventListener("click",rede3);
-		document.querySelector('#rede3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "WEB";});		
+		document.querySelector('#rede3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "WEB";});	
+
+		document.getElementById("emoj").addEventListener("click",emoj);
+		document.querySelector('#emoj').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "EMOJI";});
+
+		document.getElementById("mark").addEventListener("click",mark);
+		document.querySelector('#mark').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "MARKDOWN";});
+	
 	}
 window.addEventListener("load",addEvents);

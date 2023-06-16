@@ -400,33 +400,7 @@ var emojP = [
 "🌐️ globe","🌍️ globe","🌎️ globe","🌏️ globe","🔗️ link","🔆️ bright","🎛️ knob","🎚️ slider",
 ];
 
-var emojR = [
-"","","","","","","","",
-"","","","","","",
-"","","",""," ",
 
-"","","","",
-"","","","",
-"","","","",
-"","",
-"","","","",
-
-"","","","","","","","",
-"","","","","","","","",
-];
-
-
-var markP = [
-"#","##","######","-",
-"*","**","|-",">",
-"[]()","![]()","1.",
-];
-
-var markR = [
-"title","title 2","title 6","list",
-"italic","bold","table","blockquote",
-"link","image","list",
-];
 
 
 	var evenP = [	// Eventos JS
@@ -539,7 +513,8 @@ var cssSP = [
 ":active",":checked",":fullscreen",":modal",":enabled",":disabled",":placeholder-shown",":required",
 ":optional",":user-invalid",":lang()",":link",":visited",":target",":playing",":paused",
 ":root",":empty",":first-child",":last-child",":only-child",":hover",":focus",":focus-visible",
-//Pseudo-elements
+
+/* dois pontos antes são os Pseudo-elements */
 "::after","::before","::backdrop","::first-letter","::first-line","::placeholder",
 ];
 
@@ -548,7 +523,73 @@ var cssSR = [
 "","","","","","","","",
 "","","","","","","","",
 "","","","","","","","",
+
 "","","","","","",
+];
+
+
+
+/* Termo "jsEc" significa JS Estrutara de Controle. */
+var jsEcP = [
+"if | else | else if | switch",
+"if () {}",
+"if () {} else {}",
+"if () {} else if () {} else {}",
+
+/* Estrutura de repetição */
+"for | while | do...while",
+"for () {}",
+"for (índice in objeto) {}",
+"while () {}",
+"do {} while ()",
+];
+
+var jsEcR = [
+"Estruturas de Seleção",
+"if",
+"else",
+"else if",
+
+/* Estrutura de repetição */
+"Estruturas de Repetição",
+"for (inicilização; condição; incremento) {}",
+"for in",
+"while",
+"do while",
+];
+
+
+var opeP = [
+"Assignment Operators","= += -= *= /= %=","=","+=",
+"-=","*=","/=","%=",
+
+"/ % ++ --","/","%","++",
+"--",
+
+"&& || !","?:",
+
+"== === != !== >= <=","==","===","!=",
+"!==",">=","<=",
+
+"-","this",",","[]",".","()",
+"typeof","new",
+];
+
+
+var opeR = [
+"Operadores de Atribuição","Operadores de Atribuição","operador de atribuição, atribui valor (a uma variável)","operador de atribuição",
+"operador de atribuição","operador de atribuição","operador de atribuição","operador de atribuição",
+
+"Aritméticos","divisão","módulo (resto da divisão), usa símbolo de porcentagem","incremento +1",
+"decremento -1",
+
+"Operadores Lógicos","Operador Ternário",
+
+"Operadores de Comparação (ou Relacional)","igual, op. de comparação","identidade (valor e tipo), op. de comparação","diferente, op. de comparação",
+"identidade diferente, op. de comparação","maior ou igual, op. de comparação","menor ou igual, op. de comparação",
+
+"unário","referência ao objeto atual","separar valores","indexar arrays","acessa propriedade de um objeto","chama uma função",
+"retorna o tipo do operando","cria nova instância do objeto",
 ];
 
 
@@ -682,10 +723,23 @@ document.querySelector('#p5').innerHTML = html2R[i];
 	}
 
 		function cssS () {
-var i = `${ran(html2P.length)}`;
+var i = `${ran(cssSP.length)}`;
 document.querySelector('#p6').innerHTML= cssSP[i];
 document.querySelector('#p7').innerHTML = cssSR[i];
 	}
+
+		function jsEc () {
+var i = `${ran(jsEcP.length)}`;
+document.querySelector('#p6').innerHTML= jsEcP[i];
+document.querySelector('#p7').innerHTML = jsEcR[i];
+	}
+
+		function ope () {
+var i = `${ran(opeP.length)}`;
+document.querySelector('#p6').innerHTML= opeP[i];
+document.querySelector('#p7').innerHTML = opeR[i];
+	}
+
 
 	function cssC() {
 	//	var rndCor = Math.floor(Math.random()*(cssP.length));
@@ -725,43 +779,6 @@ document.querySelector('#p7').innerHTML = cssSR[i];
 	    speechSynthesis.speak(speech);
 	}
 
-	function emoj() {
-	//	var rndCor = Math.floor(Math.random()*(cssP.length));
-	//document.getElementById('p2').innerHTML = cssP[rndCor];
-	//document.getElementById('p3').innerHTML = cssR[rndCor];
-		 var rndCor = Math.floor(Math.random()*(emojP.length));
-		 var rndCor2 =  emojP[rndCor];
-		
-	    document.getElementById('p7').innerHTML = emojR[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
-
-	function mark() {
-	//	var rndCor = Math.floor(Math.random()*(cssP.length));
-	//document.getElementById('p2').innerHTML = cssP[rndCor];
-	//document.getElementById('p3').innerHTML = cssR[rndCor];
-		 var rndCor = Math.floor(Math.random()*(markP.length));
-		 var rndCor2 =  markP[rndCor];
-		
-	    document.getElementById('p7').innerHTML = markR[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
 
 	function jsdo() {
 	//	var rndCor = Math.floor(Math.random()*(LogPc.length));
@@ -907,14 +924,14 @@ document.querySelector('#p7').innerHTML = cssSR[i];
 		document.getElementById("cssV").addEventListener("click",cssV);
 		document.querySelector('#cssV').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "CSS - VALOR";});
 
-		document.getElementById("emoj").addEventListener("click",emoj);
-		document.querySelector('#emoj').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "EMOJI";});
-
-		document.getElementById("mark").addEventListener("click",mark);
-		document.querySelector('#mark').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "MARKDOWN";});
-
 		document.getElementById("cssS").addEventListener("click",cssS);
-		document.querySelector('#cssS').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "PSEUDO-CLASS - PSEUDO-ELEMENTS";});
+		document.querySelector('#cssS').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "PSEUDO-CLASS - PSEUDO-ELEMENT";});
+
+		document.getElementById("jsEc").addEventListener("click",jsEc);
+		document.querySelector('#jsEc').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "ESTRUTURA DE CONTROLE";});
+
+		document.getElementById("ope").addEventListener("click",ope);
+		document.querySelector('#ope').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "OPERADORES";});
 
 	}
 window.addEventListener("load",addEvents);
