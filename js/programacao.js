@@ -11,17 +11,15 @@
 // HTML, CSS, JS.
 
 	var htmlP = [ // incluso appinventor
-"article"," aside"," section","figure"," img"," figcaption",
-"details"," summary","header"," main"," footer",
-"ol"," ul","form ","fieldset"," legend",
-"select"," option"," optgroup",
-"audio"," video","canvas","tr"," td","div"," span",
-"caption","cite","dialog","embed","label","object","output","small","source","table","bold",
+"article"," aside"," section",
+"header"," main"," footer",
+"ol"," ul",
+"tr"," td","div"," span",
+"caption","cite","dialog","embed","output","small","source","table","bold",
 
 "p","h1...h6","i","blockquote","strong"," em",
 "del"," ins","pre","param","q","hr",
 
-"input"," button"," textarea",
 "code"," kbd"," samp"," var",
 
 "th","li","dl","dt",
@@ -29,12 +27,11 @@
 "bdo","blockquote","br","caption",
 "dfn",
 
-"iframe",
-"keygen","label","li","link","map","mark",
-"menu","menuitem","meter","object","output",
+"keygen","li","link","map","mark",
+"menu","menuitem","output",
 
-"source","sub","sup","time",
-"tr","track",
+"sub","sup","time",
+"tr",
 
 "col","colgroup;",
 
@@ -44,17 +41,15 @@
 
 
 	var htmlR = [
-"artigo","a parte (de lado)"," seção","figura"," imagem (image)"," legenda da figura (figure caption)",
-"detalhes"," resumo","cabeçalho"," principal"," rodapé",
-"lista ordenada (ordered list)"," lista desordenada (unordered list)","formulário"," conjunto de campos"," legenda",
-"selecionar"," opção"," grupo de opções (option group)",
-"áudio"," vídeo","tela (de pintura)","linha da tabela (table row)"," dados da tabela (table data)","divisão (division)","palmo/período/pequena distância",
-"título/subtítulo","citar","diálogo","embutir","rótulo","objeto","saída","pequeno","fonte","tabela","negrito",
+"artigo","a parte (de lado)"," seção",
+"cabeçalho"," principal"," rodapé",
+"lista ordenada (ordered list)"," lista desordenada (unordered list)",
+"linha da tabela (table row)"," dados da tabela (table data)","divisão (division)","palmo/período/pequena distância",
+"título/subtítulo","citar","diálogo","embutir","saída","pequeno","fonte","tabela","negrito",
 
 "parágrafo (paragraph)","posições (headings)","itálico (italic)","bloco de citação","forte","enfatizado (emphasized)",
 "excluído (deleted)"," inserido (inserted)","pré-formatado (preformatted)","parâmetro (parameter)"," cotação (quotation)","regra horizontal (horizontal rule)",
 
-"entrada","botão"," área de texto",
 "código"," teclado (keyboard)","amostra (sample)"," variável (variable)",
 
 "cabeçalho da tabela (table header)","Item da lista (list item)","lista de descrição (description list)","",
@@ -62,12 +57,11 @@
 "bi-directional override","bloco de citação","quebrar/pausa (break)","título/subtítulo",
 "definindo (defining)",
 
-"inline frame",
-"keygen","rótulo","item da lista (list item)","ligação","mapa de imagem (image-map)","marcado (marked)",
-"cardápio","item do menu","medição (measurement)"," objeto","saída",
+"keygen","item da lista (list item)","ligação","mapa de imagem (image-map)","marcado (marked)",
+"cardápio","item do menu","saída",
 
-"fonte"," subscrito (subscripted)"," sobrescrito (superscripted)","data hora (date-time)",
-"linha em uma tabela (row in a table)","faixas de texto (text tracks)",
+"subscrito (subscripted)"," sobrescrito (superscripted)","data hora (date-time)",
+"linha em uma tabela (row in a table)",
 
 "coluna (column)","grupo de colunas (group of columns)",
 
@@ -188,6 +182,45 @@
 "Atributo de evento",
 "Atributo de evento","Atributo de evento","Atributo de evento",
 "Atributo de evento",
+];
+
+
+
+var html4P = [
+"figure img figcaption","audio source","video source track",
+"object","iframe",
+
+"fieldset","fieldset legend form","label","input button textarea select option label",
+"fieldset legend","label","select","input",
+"select option","select optgroup option","textarea","datalist option",
+
+"type='checkbox' type='radio'","type='button' type='submit' type='reset' type='image'",
+"type='range' type='color' type='date' type='file'","type='number' type='tel' type='text'",
+"type='text' type='email' type='password' type='search' type='url'",
+
+"meter","progress","svg","canvas",
+"i span","span",
+
+"details summary",
+];
+
+
+var html4R = [
+"Media: figura, imagem (image), legenda da figura (figure caption)","Media; áudio, fonte","Media; vídeo, fonte, faixas de texto (text tracks)",
+"Media. Objeto. Incorpora elemento multimídia como arquivo pdf, áudio, vídeo...","Media. Inline frame, inseri uma página dentro doutra",
+
+"conjunto de campos, agrupa os campos","conjunto de campos, legenda, formulário","etiqueta, rótulo","elementos mais comuns: entrada, botão, área de texto...",
+"conjunto de campos, legenda","rótulo","usado em caixas de listagem e caixas de menu suspenso","entrada",
+"selecionar, opção","selecionar, grupo de opções (option group), opção","colher informações como comentários, sugestões, reclamações; ou escrever um currículo, texto maior","",
+
+"atributo tag input","atributo tag input",
+"atributo tag input","atributo tag input",
+"atributo tag input",
+
+"medidor, elemento gráfico","elemento gráfico","permite gráficos baseados em vetor","tela (de pintura); pode ser usado para desenhar gráficos",
+"elementos usados ​​para adicionar ícones","palmo, período",
+
+"detalhes, resumo",
 ];
 
 
@@ -666,6 +699,11 @@ document.querySelector('#p7').innerHTML = html2R[i];
 document.querySelector('#p5').innerHTML = html2R[i];
 	}
 
+		function html4 () {
+var i = `${ran(html4P.length)}`;
+document.querySelector('#p6').innerHTML= html4P[i];
+document.querySelector('#p7').innerHTML = html4R[i];
+	}
 
 
 	function html3() {
@@ -902,6 +940,10 @@ document.querySelector('#p7').innerHTML = opeR[i];
 		document.querySelector('#html2').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "HEAD";});
 		document.getElementById("html3").addEventListener("click",html3);
 		document.querySelector('#html3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "ATRIBUTO";});
+
+		document.getElementById("html4").addEventListener("click",html4);
+		document.querySelector('#html4').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "GRÁFICO - BOTÕES - ENTRADAS";});
+
 		document.getElementById("css").addEventListener("click",css);
 		document.querySelector('#css').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "NATIVO - MÉTODO - PROPRIEDADE";});
 
