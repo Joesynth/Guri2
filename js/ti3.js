@@ -440,194 +440,71 @@ document.querySelector('#p5').innerHTML = c[i]; // c é o array emoji.
 var i = `${ran(JavaPc.length)}`; // guarda um índice aletatório. 
 document.querySelector('#p6').innerHTML= JavaPc[i]; // Escreve o array no Display pergunta, conforme índice.
 document.querySelector('#p7').innerHTML = JavaRc[i]; // Idem no display resposta.
-document.querySelector('#p5').innerHTML = JavaRc[i]; // Idem no display emoji.
+//document.querySelector('#p5').innerHTML = JavaRc[i]; // Idem no display emoji.
+	}
+
+		function php3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(PhpPc.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= PhpPc[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = PhpRc[i]; // Idem no display resposta.
+	}
+
+		function blue3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(blue3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= blue3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = blue3R[i]; // Idem no display resposta.
+	}
+
+		function term3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(term3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= term3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = term3R[i]; // Idem no display resposta.
+	}
+
+		function node3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(node3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= node3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = node3R[i]; // Idem no display resposta.
+	}
+
+		function cord3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(cord3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= cord3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = cord3R[i]; // Idem no display resposta.
+	}
+
+		function logi3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(LogPc.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= LogPc[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = LogRc[i]; // Idem no display resposta.
+	}
+
+		function boot3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(BootPc.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= BootPc[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = BootRc[i]; // Idem no display resposta.
+	}
+
+		function mong3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(mong3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= mong3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = mong3R[i]; // Idem no display resposta.
+	}
+
+		function git3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(git3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= git3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = git3R[i]; // Idem no display resposta.
+	}
+
+		function data3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(data3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= data3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = data3R[i]; // Idem no display resposta.
 	}
 
 
-	function php3() {
-	//	var rndCor = Math.floor(Math.random()*(HarPc.length));
-	//document.getElementById('p11').innerHTML = HarPc[rndCor];
-	//document.getElementById('p12').innerHTML = HarRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(PhpPc.length));
-		 var rndCor2 =  PhpPc[rndCor];
-		
-	    document.getElementById('p7').innerHTML = PhpRc[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
 
-	function blue3() {
-	//	var rndCor = Math.floor(Math.random()*(HarPc.length));
-	//document.getElementById('p11').innerHTML = HarPc[rndCor];
-	//document.getElementById('p12').innerHTML = HarRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(blue3P.length));
-		 var rndCor2 =  blue3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = blue3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
-
-	function term3() {
-	//	var rndCor = Math.floor(Math.random()*(HarPc.length));
-	//document.getElementById('p11').innerHTML = HarPc[rndCor];
-	//document.getElementById('p12').innerHTML = HarRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(term3P.length));
-		 var rndCor2 =  term3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = term3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
-
-
-	function node3() {
-	//	var rndCor = Math.floor(Math.random()*(HarPc.length));
-	//document.getElementById('p11').innerHTML = HarPc[rndCor];
-	//document.getElementById('p12').innerHTML = HarRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(node3P.length));
-		 var rndCor2 =  node3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = node3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
-
-	function cord3() {
-		 var rndCor = Math.floor(Math.random()*(cord3P.length));
-		 var rndCor2 =  cord3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = cord3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
-
-	function logi3() {
-	//	var rndCor = Math.floor(Math.random()*(LogPc.length));
-	//document.getElementById('p11').innerHTML = LogPc[rndCor];
-	//document.getElementById('p12').innerHTML = LogRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(LogPc.length));
-		 var rndCor2 =  LogPc[rndCor];
-		
-	    document.getElementById('p7').innerHTML = LogRc[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
-
-	function boot3() {
-	//	var rndCor = Math.floor(Math.random()*(HarPc.length));
-	//document.getElementById('p11').innerHTML = HarPc[rndCor];
-	//document.getElementById('p12').innerHTML = HarRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(BootPc.length));
-		 var rndCor2 =  BootPc[rndCor];
-		
-	    document.getElementById('p7').innerHTML = BootRc[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
-
-	function mong3() {
-	//	var rndCor = Math.floor(Math.random()*(HarPc.length));
-	//document.getElementById('p11').innerHTML = HarPc[rndCor];
-	//document.getElementById('p12').innerHTML = HarRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(mong3P.length));
-		 var rndCor2 =  mong3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = mong3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
-
-	function git3() {
-		 var rndCor = Math.floor(Math.random()*(git3P.length));
-		 var rndCor2 =  git3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = git3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
-
-	function data3() {
-	//	var rndCor = Math.floor(Math.random()*(HarPc.length));
-	//document.getElementById('p11').innerHTML = HarPc[rndCor];
-	//document.getElementById('p12').innerHTML = HarRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(data3P.length));
-		 var rndCor2 =  data3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = data3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
 
 
 

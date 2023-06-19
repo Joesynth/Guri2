@@ -550,63 +550,63 @@ document.querySelector('#p5').innerHTML = c[i]; // c é o array emoji.
 var i = `${ran(nouuP.length)}`; // guarda um índice aletatório. 
 document.querySelector('#p6').innerHTML= nouuP[i]; // Escreve o array no Display pergunta, conforme índice.
 document.querySelector('#p7').innerHTML = nouuR[i]; // Idem no display resposta.
-document.querySelector('#p5').innerHTML = nouuR[i]; // Idem no display emoji.
+//document.querySelector('#p5').innerHTML = nouuR[i]; // Idem no display emoji.
 	}
 
 		function comp () {
 var i = `${ran(compP.length)}`;
 document.querySelector('#p6').innerHTML= compP[i];
 document.querySelector('#p7').innerHTML = compR[i];
-document.querySelector('#p5').innerHTML = compR[i];
+//document.querySelector('#p5').innerHTML = compR[i];
 	}
 
 		function verb() { 	
 var i = `${ran(verrP.length)}`;  
 document.querySelector('#p6').innerHTML= verrP[i];
 document.querySelector('#p7').innerHTML = verrR[i];
-document.querySelector('#p5').innerHTML = verrR[i];
+//document.querySelector('#p5').innerHTML = verrR[i];
 	}
 	
 		function adje() { 	
 var i = `${ran(adjjP.length)}`;  
 document.querySelector('#p6').innerHTML= adjjP[i];
 document.querySelector('#p7').innerHTML = adjjR[i];
-document.querySelector('#p5').innerHTML = adjjR[i];
+//document.querySelector('#p5').innerHTML = adjjR[i];
 	}
 
 		function phra() { 	
 var i = `${ran(phrrP.length)}`;  
 document.querySelector('#p6').innerHTML= phrrP[i];
 document.querySelector('#p7').innerHTML = phrrR[i];
-document.querySelector('#p5').innerHTML = phrrR[i];
+//document.querySelector('#p5').innerHTML = phrrR[i];
 	}
 		
 		function tran() { 	
 var i = `${ran(TranP.length)}`;  
 document.querySelector('#p6').innerHTML= TranP[i];
 document.querySelector('#p7').innerHTML = TranR[i];
-document.querySelector('#p5').innerHTML = TranR[i];
+//document.querySelector('#p5').innerHTML = TranR[i];
 	}
 
 		function home() { 	
 var i = `${ran(HomP.length)}`;  
 document.querySelector('#p6').innerHTML= HomP[i];
 document.querySelector('#p7').innerHTML = HomR[i];
-document.querySelector('#p5').innerHTML = HomR[i];
+//document.querySelector('#p5').innerHTML = HomR[i];
 	}
 
 		function toys() { 	
 var i = `${ran(ToyP.length)}`;  
 document.querySelector('#p6').innerHTML= ToyP[i];
 document.querySelector('#p7').innerHTML = ToyR[i];
-document.querySelector('#p5').innerHTML = ToyR[i];
+//document.querySelector('#p5').innerHTML = ToyR[i];
 	}
 
 		function math() { 	
 var i = `${ran(MatP.length)}`;  
 document.querySelector('#p6').innerHTML= MatP[i];
 document.querySelector('#p7').innerHTML = MatR[i];
-document.querySelector('#p5').innerHTML = MatR[i];
+//document.querySelector('#p5').innerHTML = MatR[i];
 	}
 
 
@@ -614,14 +614,14 @@ document.querySelector('#p5').innerHTML = MatR[i];
 var i = `${ran(NatP.length)}`;  
 document.querySelector('#p6').innerHTML= NatP[i];
 document.querySelector('#p7').innerHTML = NatR[i];
-document.querySelector('#p5').innerHTML = NatR[i];
+//document.querySelector('#p5').innerHTML = NatR[i];
 	}
 
 		function musi() { 	
 var i = `${ran(MusP.length)}`;  
 document.querySelector('#p6').innerHTML= MusP[i];
 document.querySelector('#p7').innerHTML = MusR[i];
-document.querySelector('#p5').innerHTML = MusR[i];
+//document.querySelector('#p5').innerHTML = MusR[i];
 	}
 			
 		//  FUNÇÇÔES APP PRETO
@@ -709,7 +709,7 @@ document.querySelector('#p5').innerHTML = MusR[i];
 var i = `${ran(arttP.length)}`;  
 document.querySelector('#p6').innerHTML= arttP[i];
 document.querySelector('#p7').innerHTML = arttR[i];
-document.querySelector('#p5').innerHTML = arttR[i];
+//document.querySelector('#p5').innerHTML = arttR[i];
 	}
 
 

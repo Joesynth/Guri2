@@ -689,14 +689,13 @@ document.querySelector('#p5').innerHTML = c[i]; // c é o array emoji.
 var i = `${ran(htmlP.length)}`; // guarda um índice aletatório. 
 document.querySelector('#p6').innerHTML= htmlP[i]; // Escreve o array no Display pergunta, conforme índice.
 document.querySelector('#p7').innerHTML = htmlR[i]; // Idem no display resposta.
-document.querySelector('#p5').innerHTML = htmlR[i]; // Idem no display emoji.
+//document.querySelector('#p5').innerHTML = htmlR[i]; // Idem no display emoji.
 	}
 
 		function html2 () {
 var i = `${ran(html2P.length)}`;
 document.querySelector('#p6').innerHTML= html2P[i];
 document.querySelector('#p7').innerHTML = html2R[i];
-document.querySelector('#p5').innerHTML = html2R[i];
 	}
 
 		function html4 () {
@@ -705,60 +704,24 @@ document.querySelector('#p6').innerHTML= html4P[i];
 document.querySelector('#p7').innerHTML = html4R[i];
 	}
 
-
-	function html3() {
-	//	var rndCor = Math.floor(Math.random()*(LogPc.length));
-	//document.getElementById('p11').innerHTML = LogPc[rndCor];
-	//document.getElementById('p12').innerHTML = LogRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(html3P.length));
-		 var rndCor2 =  html3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = html3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
+		function html3 () {
+var i = `${ran(html3P.length)}`;
+document.querySelector('#p6').innerHTML= html3P[i];
+document.querySelector('#p7').innerHTML = html3R[i];
 	}
 
-		function css() {
-		 var rndCor = Math.floor(Math.random()*(cssP.length));
-		 var rndCor2 =  cssP[rndCor];
-		
-	    document.getElementById('p7').innerHTML = cssR[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-		}
-
-	function css2() {
-	//	var rndCor = Math.floor(Math.random()*(cssP.length));
-	//document.getElementById('p2').innerHTML = cssP[rndCor];
-	//document.getElementById('p3').innerHTML = cssR[rndCor];
-		 var rndCor = Math.floor(Math.random()*(css2P.length));
-		 var rndCor2 =  css2P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = css2R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
+		function css () {
+var i = `${ran(cssP.length)}`;
+document.querySelector('#p6').innerHTML= cssP[i];
+document.querySelector('#p7').innerHTML = cssR[i];
 	}
+
+		function css2 () {
+var i = `${ran(css2P.length)}`;
+document.querySelector('#p6').innerHTML= css2P[i];
+document.querySelector('#p7').innerHTML = css2R[i];
+	}
+
 
 		function cssS () {
 var i = `${ran(cssSP.length)}`;
@@ -778,145 +741,53 @@ document.querySelector('#p6').innerHTML= opeP[i];
 document.querySelector('#p7').innerHTML = opeR[i];
 	}
 
-
-	function cssC() {
+		function cssC () {
 	//	var rndCor = Math.floor(Math.random()*(cssP.length));
 	//document.getElementById('p2').innerHTML = cssP[rndCor];
 	//document.getElementById('p3').innerHTML = cssR[rndCor];
-		 var rndCor = Math.floor(Math.random()*(cssCP.length));
-		 var rndCor2 =  cssCP[rndCor];
-		
-	    document.getElementById('p7').innerHTML = cssCR[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
+var i = `${ran(cssCP.length)}`;
+document.querySelector('#p6').innerHTML= cssCP[i];
+document.querySelector('#p7').innerHTML = cssCR[i];
 	}
 
-	function cssV() {
-	//	var rndCor = Math.floor(Math.random()*(cssP.length));
-	//document.getElementById('p2').innerHTML = cssP[rndCor];
-	//document.getElementById('p3').innerHTML = cssR[rndCor];
-		 var rndCor = Math.floor(Math.random()*(cssVP.length));
-		 var rndCor2 =  cssVP[rndCor];
-		
-	    document.getElementById('p7').innerHTML = cssVR[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
+		function cssV () {
+var i = `${ran(cssVP.length)}`;
+document.querySelector('#p6').innerHTML= cssVP[i];
+document.querySelector('#p7').innerHTML = cssVR[i];
 	}
 
-
-	function jsdo() {
-	//	var rndCor = Math.floor(Math.random()*(LogPc.length));
-	//document.getElementById('p11').innerHTML = LogPc[rndCor];
-	//document.getElementById('p12').innerHTML = LogRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(css3P.length));
-		 var rndCor2 =  css3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = css3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
+		function jsdo () {
+var i = `${ran(css3P.length)}`;
+document.querySelector('#p6').innerHTML= css3P[i];
+document.querySelector('#p7').innerHTML = css3R[i];
 	}
 
-	function js3() {
-	//	var rndCor = Math.floor(Math.random()*(JsPc.length));
-	//document.getElementById('p11').innerHTML = JsPc[rndCor];
-	//document.getElementById('p12').innerHTML = JsRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(JsPc.length));
-		 var rndCor2 =  JsPc[rndCor];
-		
-	    document.getElementById('p7').innerHTML = JsRc[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
+		function js3 () {
+var i = `${ran(JsPc.length)}`;
+document.querySelector('#p6').innerHTML= JsPc[i];
+document.querySelector('#p7').innerHTML = JsRc[i];
+	}
+
+		function even () {
+var i = `${ran(evenP.length)}`;
+document.querySelector('#p6').innerHTML= evenP[i];
+document.querySelector('#p7').innerHTML = evenR[i];
+	}
+
+		function obje () {
+var i = `${ran(objeP.length)}`;
+document.querySelector('#p6').innerHTML= objeP[i];
+document.querySelector('#p7').innerHTML = objeR[i];
+	}
+
+		function rese () {
+var i = `${ran(reseP.length)}`;
+document.querySelector('#p6').innerHTML= reseP[i];
+document.querySelector('#p7').innerHTML = reseR[i];
 	}
 
 
 
-
-	function even() {
-	//	var rndCor = Math.floor(Math.random()*(HarPc.length));
-	//document.getElementById('p11').innerHTML = HarPc[rndCor];
-	//document.getElementById('p12').innerHTML = HarRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(evenP.length));
-		 var rndCor2 =  evenP[rndCor];
-		
-	    document.getElementById('p7').innerHTML = evenR[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
-
-
-
-	function obje() {
-	//	var rndCor = Math.floor(Math.random()*(HarPc.length));
-	//document.getElementById('p11').innerHTML = HarPc[rndCor];
-	//document.getElementById('p12').innerHTML = HarRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(objeP.length));
-		 var rndCor2 =  objeP[rndCor];
-		
-	    document.getElementById('p7').innerHTML = objeR[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
-
-	function rese() {
-	//	var rndCor = Math.floor(Math.random()*(HarPc.length));
-	//document.getElementById('p11').innerHTML = HarPc[rndCor];
-	//document.getElementById('p12').innerHTML = HarRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(reseP.length));
-		 var rndCor2 =  reseP[rndCor];
-		
-	    document.getElementById('p7').innerHTML = reseR[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
-	}
 
 
 
@@ -964,7 +835,7 @@ document.querySelector('#p7').innerHTML = opeR[i];
 		document.querySelector('#cssC').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "CSS - CORES";});
 
 		document.getElementById("cssV").addEventListener("click",cssV);
-		document.querySelector('#cssV').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "CSS - VALOR";});
+		document.querySelector('#cssV').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "CSS - VALUES";});
 
 		document.getElementById("cssS").addEventListener("click",cssS);
 		document.querySelector('#cssS').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "PSEUDO-CLASS - PSEUDO-ELEMENT";});

@@ -709,6 +709,7 @@ document.querySelector('#p5').innerHTML = c[i]; // c é o array emoji.
 ############################################################
 */
 
+/*
 	function andr3() {
 	//	var rndCor = Math.floor(Math.random()*(LinPc.length));
 	//document.getElementById('p11').innerHTML = LinPc[rndCor];
@@ -727,178 +728,68 @@ document.querySelector('#p5').innerHTML = c[i]; // c é o array emoji.
 	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
 	    speechSynthesis.speak(speech);	
 	}
+*/
 
-	function ubun3() {
-	//	var rndCor = Math.floor(Math.random()*(LinPc.length));
-	//document.getElementById('p11').innerHTML = LinPc[rndCor];
-	//document.getElementById('p12').innerHTML = LinRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(ubun3P.length));
-		 var rndCor2 =  ubun3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = ubun3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);	
+		function andr3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(andr3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= andr3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = andr3R[i]; // Idem no display resposta.
+//document.querySelector('#p5').innerHTML = htmlR[i]; // Idem no display emoji.
 	}
 
-	function wind3() {
-	//	var rndCor = Math.floor(Math.random()*(LinPc.length));
-	//document.getElementById('p11').innerHTML = LinPc[rndCor];
-	//document.getElementById('p12').innerHTML = LinRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(Wind3P.length));
-		 var rndCor2 =  Wind3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = Wind3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);	
+		function ubun3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(ubun3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= ubun3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = ubun3R[i]; // Idem no display resposta.
 	}
 
-	function comp3() {
-	//	var rndCor = Math.floor(Math.random()*(LinPc.length));
-	//document.getElementById('p11').innerHTML = LinPc[rndCor];
-	//document.getElementById('p12').innerHTML = LinRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(comp3P.length));
-		 var rndCor2 =  comp3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = comp3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);	
+		function wind3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(Wind3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= Wind3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = Wind3R[i]; // Idem no display resposta.
 	}
 
-	function hard3() {
-	//	var rndCor = Math.floor(Math.random()*(LinPc.length));
-	//document.getElementById('p11').innerHTML = LinPc[rndCor];
-	//document.getElementById('p12').innerHTML = LinRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(hard3P.length));
-		 var rndCor2 =  hard3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = hard3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
+		function comp3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(comp3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= comp3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = comp3R[i]; // Idem no display resposta.
 	}
 
-	function soft3() {
-	//	var rndCor = Math.floor(Math.random()*(HarPc.length));
-	//document.getElementById('p11').innerHTML = HarPc[rndCor];
-	//document.getElementById('p12').innerHTML = HarRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(soft3P.length));
-		 var rndCor2 =  soft3P[rndCor];
-		
-	    document.getElementById('p7').innerHTML = soft3R[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
+		function hard3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(hard3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= hard3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = hard3R[i]; // Idem no display resposta.
 	}
 
-	function segu3() {
-	//	var rndCor = Math.floor(Math.random()*(SegPc.length));
-	//document.getElementById('p11').innerHTML = SegPc[rndCor];
-	//document.getElementById('p12').innerHTML = SegRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(SegPc.length));
-		 var rndCor2 =  SegPc[rndCor];
-		
-	    document.getElementById('p7').innerHTML = SegRc[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
+		function soft3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(soft3P.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= soft3P[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = soft3R[i]; // Idem no display resposta.
 	}
 
-	function rede3() {
-	//	var rndCor = Math.floor(Math.random()*(HarPc.length));
-	//document.getElementById('p11').innerHTML = HarPc[rndCor];
-	//document.getElementById('p12').innerHTML = HarRc[rndCor];
-		 var rndCor = Math.floor(Math.random()*(RedPc.length));
-		 var rndCor2 =  RedPc[rndCor];
-		
-	    document.getElementById('p7').innerHTML = RedRc[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);	
+		function segu3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(SegPc.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= SegPc[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = SegRc[i]; // Idem no display resposta.
 	}
 
-	function emoj() {
-	//	var rndCor = Math.floor(Math.random()*(cssP.length));
-	//document.getElementById('p2').innerHTML = cssP[rndCor];
-	//document.getElementById('p3').innerHTML = cssR[rndCor];
-		 var rndCor = Math.floor(Math.random()*(emojP.length));
-		 var rndCor2 =  emojP[rndCor];
-		
-	    document.getElementById('p7').innerHTML = emojR[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
+		function rede3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(RedPc.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= RedPc[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = RedRc[i]; // Idem no display resposta.
 	}
 
-	function mark() {
-	//	var rndCor = Math.floor(Math.random()*(cssP.length));
-	//document.getElementById('p2').innerHTML = cssP[rndCor];
-	//document.getElementById('p3').innerHTML = cssR[rndCor];
-		 var rndCor = Math.floor(Math.random()*(markP.length));
-		 var rndCor2 =  markP[rndCor];
-		
-	    document.getElementById('p7').innerHTML = markR[rndCor];      // text2 display r
-	    
-	    var text = document.getElementById('p6');                      // text display p
-	    var speech = new SpeechSynthesisUtterance();
-	    speech.rate = 0.7;  // 0.1 to 10
-	    speech.pitch = 1;   // 0 to 2
-	    speech.volume = 1;   // 0 to 1
-	    speech.voice = speechSynthesis.getVoices()[3];
-	    speech.text = text.innerHTML= rndCor2; // ou .text = "alguma coisa";
-	    speechSynthesis.speak(speech);
+		function emoj () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(emojP.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= emojP[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = emojR[i]; // Idem no display resposta.
 	}
 
+		function mark () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(markP.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= markP[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = markR[i]; // Idem no display resposta.
+	}
 
 
 
