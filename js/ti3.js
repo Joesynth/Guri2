@@ -78,19 +78,63 @@ var blue3RReEx = [	// UPDATE - CAMPO N EXISTE
 
 
 var term3P = [
-"clear","present working directory, print working directory",
-"list",
-"Change Directory",
-"Desktop","make directory",
-"Remove","AND",
+"whatis","whatis ls","find",
+"df","who","history",
+"jobs","kill",
+
+/* Diretório */
+"pwd",
+"ls","ls -l",
+"cd","cd ~",
+"cd ..","cd ../..",
+"mkdir nome","mkdir pasta1 pasta2",
+"mkdir 'a b'",
+
+/* Arquivo*/
+"touch index.html","touch nome.pdf",
+"rm","cat index.html","gedit index.html",
+
+/* Atalho */
+"CtrlAlt T | CtrlShit Q","CtrlShift T | CtrlShift W",
+"Ctrl C","Tab",
+/* Software */
+"gedit","vlc",
+
+"exit","clear",
+"shutdown","--help",
+"&&","~",
+"$ | # ",
+"Desktop",
 ];
 
 var term3R = [
-"clarear; limpa (a tela).","Diretorio de trabalho atual; diretório atual.",
-"listar; lista",
-"mudar diretório (atual de trabalho)",
-"área de trabalho","criar diretório (pasta)",
-"Remover","&&",
+"diz o que um outro comando faz","diz o que faz o comando ls","localizar arquivos",
+"disk free: mostra a quantidade de espaço usada","quem está logado no sistema","lista os últimos comandos usados",
+"exibe todos os jobs que estão em execução","utilizado para encerrar um programa que não esteja respondendo bem",
+
+/* Diretório */
+"present working directory, print working directory; diretório de trabalho atual, diretório atual; exibe o caminho do diretório em que estamos no momento",
+"list; listar, lista; list directory; lista conteúdo do diretório atual (arquivos e diretórios)","exibe os arquivos e pastas do diretório em forma de lista",
+"change directory; mudar diretório (atual de trabalho); navega entre diretórios","volta ao diretório home",
+"navega acima um nível","sobe dois níveis",
+"make directory; criar diretório (pasta)","cria diretórios pasta1 pasta2 (para mais pastas é a mesma lógica)",
+"cria nome com espaço entre duas palavras. Também para rmdir, cd.",
+
+/* Arquivo*/
+"cria arquivo 'index.html'vazio, em branco, mas poderia ser um .txt, etc.","cria arquivo com extensão pdf",
+"remove; remover (um arquivo ou um diretório)","visualiza o arquivo 'index.html', ver o conteúdo do arquivo","abre o arquivo 'index.html' no editor Gedit",
+
+/* Atalho */
+"abre terminal | sai do terminal","abrir | fechar aba",
+"interrompe uma execução","autocomplete. ex.: abre o Firefox: fireTab",
+/* Software */
+"Abre o editor de códigos Gedit.","Abre o programa musical VLC",
+
+"termina a sessão, ou seja, a shell","clarear; limpa (a tela do terminal)",
+"Desliga o computador","nome do comando + --help diz como usar o comando.",
+"AND","diretório padrão (do usuário), diretório atual",
+"indica usuário comum, ou sustenido (jogo da velha) usuario logado atualmente é o root (administrator do sistema)",
+"área de trabalho",
 ];
 
 var term3RReEx = [	// UPDATE - CAMPO N CRIADO

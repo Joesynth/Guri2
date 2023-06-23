@@ -226,7 +226,7 @@ var html4R = [
 
 
 	var css2P = [	// css, incluso app inventor
-"animation:","animation-duration:","justify-content:","display:","background:","background-image:","background-color:","background-repeat:",
+"animation | animation-duration | animation-name","justify-content:","display:","background:","background-image:","background-color:","background-repeat:",
 "background-position:","background-size:","background-attachment:","border:","border-style:","border-width:","border-color:","border-top:",
 "border-bottom:","border-radius:","box-shadow:","box-sizing:","color:","cursor:","font:","font-size:",
 "font-family:","font-weight:","font-style:","line-height:",
@@ -240,7 +240,7 @@ var html4R = [
 "transform",
 ];
 	var css2R = [
-"animação","duração da animação ","justificar o conteúdo","exibir, exibição","fundo","imagem de fundo","cor de fundo","repetição de fundo",
+"animação | duração da animação | nome da animação","justificar o conteúdo","exibir, exibição","fundo","imagem de fundo","cor de fundo","repetição de fundo",
 "posição de fundo","tamanho de fundo","anexo de fundo","borda","estilo de borda","largura da borda","cor da borda","fronteira superior",
 "fronteira inferior","raio da borda","sombra da caixa","dimensionamento da caixa","cor","cursor","fonte","tamanho da fonte",
 "família de fontes","peso da fonte, espessura","estilo de fonte","altura da linha",
@@ -392,28 +392,28 @@ var html4R = [
 
 
 var cssVP = [
-"absolute | relative","visible | hidden","uppercase","grayscale() | blur()",
+"absolute | relative","visible | hidden","uppercase","brightness() | contrast() | grayscale() ",
 "center","flex","solid","bold",
-"inset","double","no-repeat","fixed",
+"inset 0 0 5px red","double","no-repeat","fixed",
 "column","row","pointer","left | right",
 
 "block | table | none | inline-block | inherit | list-item",
 "mv boli | monospace | cursive | Bree Serif","sans-serif | serif",
 
-"linear-gradient()","var()","invert()",
+"linear-gradient()","var()","invert() | opacity() | blur()",
 "space-evenly | center | space-between | space-around","rotate()",
 ];
 
 var cssVR = [
-"","visível | oculto","maiúscula","escala de cinza | desfoque, desfocar, borrar",
+"","visível | oculto","maiúscula","brilho | contraste | escala de cinza",
 "centro","flexível","","",
-"","","","",
+"sombra interna vermelha, num botão por ex.","","","",
 "","","","",
 
 "",
 "","",
 
-"","","",
+"","","invertida | opacidade | desfoque, desfocar, borrar",
 "","",
 ];
 
