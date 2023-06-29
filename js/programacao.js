@@ -229,15 +229,18 @@ var html4R = [
 "animation | animation-duration | animation-name","justify-content:","display:","background:","background-image:","background-color:","background-repeat:",
 "background-position:","background-size:","background-attachment:","border:","border-style:","border-width:","border-color:","border-top:",
 "border-bottom:","border-radius:","box-shadow:","box-sizing:","color:","cursor:","font:","font-size:",
-"font-family:","font-weight:","font-style:","line-height:",
+"font-family:","font-weight:","font-style:","line-height:","text-height",
 "margin:","margin-right:","margin-bottom:","margin-left:",
 "padding:","padding-top:","padding-right:",
 
 "position:","color:","top:","left:","right:","bottom:","clear:","clip:","letter-spacing:","transition:",
-"text-align:","text-decoration:","text-indent:","text-shadow:","text-transform:",
+"text-align: | text-indent:","text-decoration:","text-shadow:","text-transform:",
 "z-index:","filter","width:","direction:","float:","height:","overflow:",
 "list-style:","opacity:","visibility","justify-content:","align-items:","flex-direction:",
-"transform",
+"transform","vertical-align",
+"ul {list-style: none;}","a {text-decoration: none;}",
+"",
+"","",
 ];
 	var css2R = [
 "animação | duração da animação | nome da animação","justificar o conteúdo","exibir, exibição","fundo","imagem de fundo","cor de fundo","repetição de fundo",
@@ -248,10 +251,13 @@ var html4R = [
 "preenchimento","preenchimento superior","preenchimento direito",
 
 "posição:","cor","topo","esquerda","direita","inferior","claro","grampo","espaçamento entre letras","transição",
-"alinhamento de texto","decoração de texto","recuo do texto","sombra de texto","transformação de texto",
+"alinhamento de texto | recuo do texto","decoração de texto","sombra de texto","transformação de texto",
 "ordem-z","filtro","largura","direção","flutuar","altura","transbordar",
 "estilo de lista","opacidade","visibilidade","justificar o conteúdo","alinhar itens:","direção fexível",
+"","",
+"tira a bolinha da lista","tira o sublinhado da âncora",
 "",
+"","",
 ];
 
 
@@ -323,15 +329,22 @@ var html4R = [
 "document.write()","addEventListener()",
 "getElementById()","getElementsByTagName()",
 "querySelector()","querySelectorAll()","getElementsByClassName()",
-"play()","arc()",
+"play()","load()","pause()",
 
+"arc()",
 "document.createElement()",
 "getContext()","fillRect()",
+
 // propriedade
+"autoplay","controls","currentTime","duration",
+"ended","loop",
+"muted","paused",
+"preload","src",
+".controls",".volume",".duration",
+
 ".innerHTML","innerText",
 ".currentTime",
 "document.forms","document.cookie","document.links","document.images",
-".controls",".volume",".duration",
 ".fillStyle",
 "onclick","style",
 // outros
@@ -343,15 +356,22 @@ var html4R = [
 "documento, escreva","adicionar ouvinte de evento, adiciona escutador",
 "obter elemento por id","obter elementos pelo nome da tag",
 "seletor de consulta","seletor de consulta (tudo)","obter elementos pelo nome da classe",
-"toque","arco",
+"toque, inicia (a reprodução); referente a áudio","referente a áudio","referente a áudio",
 
+"arco",
 "documento, cria um elemento (HTML)",
 "obter contexto","preencher (fill)",
+
 // propriedade
+"propriedade referente a áudio; booleano","propriedade referente a áudio; booleano","propriedade referente a áudio","propriedade referente a áudio",
+"propriedade referente a áudio; booleano; somente leitura","propriedade referente a áudio; booleano",
+"propriedade referente a áudio; booleano","propriedade referente a áudio; booleano; somente leitura",
+"propriedade referente a áudio","propriedade referente a áudio; string que reflete o atributo HTML src",
+"controles","propriedade que vai de 0 a 1","duração",
+
 "HTML interno","texto interno",
 "hora atual",
 "documento, formulários","documento, biscoito","documento, ligações","documento, imagens",
-"controles","","duração",
 "preencher (fill)",
 "ao clicar","estilo",
 // outros
@@ -392,29 +412,31 @@ var html4R = [
 
 
 var cssVP = [
-"absolute | relative","visible | hidden","uppercase","brightness() | contrast() | grayscale() ",
-"center","flex","solid","bold",
+"absolute | relative | fixed","visible | hidden","uppercase | lowercase | capitalize","brightness() | contrast() | grayscale() ",
+"center","flex | inline | block table","1px solid yellow","bold",
 "inset 0 0 5px red","double","no-repeat","fixed",
 "column","row","pointer","left | right",
 
-"block | table | none | inline-block | inherit | list-item",
+"block | table | none | inline-block | inherit | list-item","8px 16px","none",
 "mv boli | monospace | cursive | Bree Serif","sans-serif | serif",
+"3px 3px 4px red",
 
 "linear-gradient()","var()","invert() | opacity() | blur()",
-"space-evenly | center | space-between | space-around","rotate()",
+"space-evenly | center | space-between | space-around","rotate()","left | right | justify | center","middle | top | bottom",
 ];
 
 var cssVR = [
-"","visível | oculto","maiúscula","brilho | contraste | escala de cinza",
-"centro","flexível","","",
+"relativo à position","visível | oculto","maiúscula, minúsculas,capitalizar; relativas à text-transform","brilho | contraste | escala de cinza",
+"centro","flexível; e outras relativas à display","border","",
 "sombra interna vermelha, num botão por ex.","","","",
-"","","","",
+"","","","sem serifa, serifa",
 
-"",
+"relativas à display","padding respectivamente top/bottom e esquerda/direita","um valor relativo à list-style numa ul",
 "","",
+"posição horizontal, vertical, blur, cor; relativo à propriedade text-shadow",
 
 "","","invertida | opacidade | desfoque, desfocar, borrar",
-"","",
+"","","relativas à text-align","relativo a vertical-align",
 ];
 
 
@@ -440,12 +462,20 @@ var emojP = [
 "keydown","keypress","keyup",
 "mouseout",
 "keydown keypress keyup","onclick onmousemove onmouseover onmouseout",
+/* Audio/Video Events (fonte: mozilla) */
+"play","pause","playing","progress",
+"canplay","durationchange","ended",
+"seeking","waiting",
 ];
 
 	var evenR = [	// Eventos JS
 "","","",
 "",
 "","",
+/* Audio/Video Events */
+"Audio/Video Events","Audio/Video Events","Audio/Video Events","Audio/Video Events",
+"Audio/Video Events","Audio/Video Events","Audio/Video Events",
+"Audio/Video Events","Audio/Video Events",
 ];
 
 	var evenReEx = [	// UPDATE - CAMPO N EXISTE
@@ -543,21 +573,50 @@ var reseR = [
 
 /* O "S" em "cssS" significa pSeudo-class. */
 var cssSP = [
-":active",":checked",":fullscreen",":modal",":enabled",":disabled",":placeholder-shown",":required",
-":optional",":user-invalid",":lang()",":link",":visited",":target",":playing",":paused",
-":root",":empty",":first-child",":last-child",":only-child",":hover",":focus",":focus-visible",
+":checked",":fullscreen",":modal",":enabled",":disabled",":placeholder-shown",":required",
+":optional",":user-invalid",":lang()",":target",":playing",":paused",
+":root",":empty",":first-child",":last-child",":only-child",":link | :visited | :hover | :active",":focus",":focus-visible",
+"Pseudo-classe",
+".btn:hover {}",".modal:target {}","nav li a:hover {color: red;}",
 
 /* dois pontos antes são os Pseudo-elements */
 "::after","::before","::backdrop","::first-letter","::first-line","::placeholder",
+"Pseudo-elemento",
+
+/* Seletor*/
+"# | .",
+"[autoplay] | [atrib] | [atrib=valor] | [atrib$=valor] | outros",
+
+/* Combinador*/
+"div span",
+"ul > li",
+"p ~ span",
+"ul + li",
+"espaço | > | + | ~",
 ];
 
 
 var cssSR = [
-"","","","","","","","",
-"","","","","","","","",
-"","","","","","","","",
-
+"","","","","","","",
 "","","","","","",
+"","","","","","LVHA; relativas à tag a","","",
+"seleciona elementos baseados em informaçãoes que não estão contidas na árvore de documentos como um estado ou que é particularmente complexa de se extrair. Ex.: se um link foi visitado anteriormente ou não.",
+"exemplo","exemplo","muda cor do link ao passar mouse por cima",
+
+/* dois pontos antes são os Pseudo-elements */
+"","","","","","",
+"Abstração da árvore que representa entidade além do que o HTML faz. Ex.: um elemento que descreva a primeira letra ou linha de um parágrafo, marcador de uma lista.",
+
+/* Seletor*/
+"seletor '#' escolhe nós baseados no valor do atributo id | seletor '.' escolhe elementos baseados no valor de seu atributo class",
+"seletores por atributo; o [autoplay] corresponde a todos os elementos que possuirem o atributo autoplay (para qualquer valor)",
+
+/* Combinador*/
+"combinador espaço; seletor de descendentes; seleciona nós que são filhos do elemento especificado anteriormente, mas não sendo filhos diretos",
+"combinador >; seletor de filhos; seleciona nós que são filhos diretos do elemento especificado anteriormente",
+"combindor ~; seletor geral de irmãos; todo elemento span que seguir um elemento p dentro de um mesmo elemento pai",
+"combinador +; seleciona irmãos adjacentes; equivale a nós que se seguem imediatamente o elemento especificado anteriormente. O li é qualquer elemento que se segue logo após ul.",
+"combinadores; um combinador combina outros seletores",
 ];
 
 
@@ -838,7 +897,7 @@ document.querySelector('#p7').innerHTML = reseR[i];
 		document.querySelector('#cssV').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "CSS - VALUES";});
 
 		document.getElementById("cssS").addEventListener("click",cssS);
-		document.querySelector('#cssS').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "PSEUDO-CLASS - PSEUDO-ELEMENT";});
+		document.querySelector('#cssS').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "SELETOR - PSEUDO-CLASS - PSEUDO-ELEMENT";});
 
 		document.getElementById("jsEc").addEventListener("click",jsEc);
 		document.querySelector('#jsEc').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "ESTRUTURA DE CONTROLE";});
