@@ -426,7 +426,7 @@ var cssVP = [
 ];
 
 var cssVR = [
-"relativo à position","visível | oculto","maiúscula, minúsculas,capitalizar; relativas à text-transform","brilho | contraste | escala de cinza",
+"relativo à position","visível | oculto","maiúscula, minúsculas, capitalizar; relativas à text-transform","brilho | contraste | escala de cinza",
 "centro","flexível; e outras relativas à display","border","",
 "sombra interna vermelha, num botão por ex.","","","",
 "","","","sem serifa, serifa",
@@ -575,7 +575,10 @@ var reseR = [
 var cssSP = [
 ":checked",":fullscreen",":modal",":enabled",":disabled",":placeholder-shown",":required",
 ":optional",":user-invalid",":lang()",":target",":playing",":paused",
-":root",":empty",":first-child",":last-child",":only-child",":link | :visited | :hover | :active",":focus",":focus-visible",
+":root",":empty",":first-child",":last-child",":only-child",
+":link | :visited | :hover | :active",
+":link | :visited | :hover | :active",
+":focus",":focus-visible",
 "Pseudo-classe",
 ".btn:hover {}",".modal:target {}","nav li a:hover {color: red;}",
 
@@ -586,6 +589,8 @@ var cssSP = [
 /* Seletor*/
 "# | .",
 "[autoplay] | [atrib] | [atrib=valor] | [atrib$=valor] | outros",
+"* {padding: 0; margin: 0;}",
+"[type='button'] {}",
 
 /* Combinador*/
 "div span",
@@ -599,8 +604,11 @@ var cssSP = [
 var cssSR = [
 "","","","","","","",
 "","","","","","",
-"","","","","","LVHA; relativas à tag a","","",
-"seleciona elementos baseados em informaçãoes que não estão contidas na árvore de documentos como um estado ou que é particularmente complexa de se extrair. Ex.: se um link foi visitado anteriormente ou não.",
+"","","","","",
+"LVHA; relativas à tag a",
+"link não visitado, link visitado, ponteiro do mouse passa sobre algo, link ativado (ao clicar)",
+"","",
+"seleciona elementos baseados em informaçãoes que não estão na árvore de documentos, ou que é complexa de se extrair. Ex.: se um link foi visitado anteriormente.",
 "exemplo","exemplo","muda cor do link ao passar mouse por cima",
 
 /* dois pontos antes são os Pseudo-elements */
@@ -610,12 +618,14 @@ var cssSR = [
 /* Seletor*/
 "seletor '#' escolhe nós baseados no valor do atributo id | seletor '.' escolhe elementos baseados no valor de seu atributo class",
 "seletores por atributo; o [autoplay] corresponde a todos os elementos que possuirem o atributo autoplay (para qualquer valor)",
+"seletor universal",
+"seleciona os elementos do tipo button",
 
 /* Combinador*/
-"combinador espaço; seletor de descendentes; seleciona nós que são filhos do elemento especificado anteriormente, mas não sendo filhos diretos",
-"combinador >; seletor de filhos; seleciona nós que são filhos diretos do elemento especificado anteriormente",
-"combindor ~; seletor geral de irmãos; todo elemento span que seguir um elemento p dentro de um mesmo elemento pai",
-"combinador +; seleciona irmãos adjacentes; equivale a nós que se seguem imediatamente o elemento especificado anteriormente. O li é qualquer elemento que se segue logo após ul.",
+"combinador espaço; descendant selector, seletor de descendentes; seleciona nós que são filhos do elemento principal; equivale a se x for descendente de y",
+"combinador >; child selector; seletor filho, seletor de filhos; seleciona nós que são filhos diretos do elemento especificado anteriormente",
+"combindor ~; general sibling selector; seletor geral de irmãos; seleciona todo elemento span após p, se ambos dentro de um mesmo elemento pai",
+"combinador +; adjacent sibling selector; seleciona irmãos adjacentes; nós que se seguem imediatamente o elemento principal".
 "combinadores; um combinador combina outros seletores",
 ];
 
@@ -897,7 +907,7 @@ document.querySelector('#p7').innerHTML = reseR[i];
 		document.querySelector('#cssV').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "CSS - VALUES";});
 
 		document.getElementById("cssS").addEventListener("click",cssS);
-		document.querySelector('#cssS').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "SELETOR - PSEUDO-CLASS - PSEUDO-ELEMENT";});
+		document.querySelector('#cssS').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "SELETOR";});
 
 		document.getElementById("jsEc").addEventListener("click",jsEc);
 		document.querySelector('#jsEc').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "ESTRUTURA DE CONTROLE";});
