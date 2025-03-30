@@ -44,12 +44,10 @@ body {
 }
 
 
-#btL {
+footer {
 	order: 2;
 	padding-bottom: 9em;
-}
 
-#btL {
 	top: 68%;
 	background-color: lightblue;
 	text-align: center;
@@ -59,25 +57,32 @@ body {
 	height: 44px;
 }
 
-#btR {
+main {
 	flex: 1;
 }
 
-#btR {
+main {
 	top: 34%;
 	//background-color: lightyellow;
 	text-align: center;
 }
 
-#btL button {
-  width: 2em;
-  height: 2em;
-}
-
-#btR button {
+main button {
   width: 1.5em;
   height: 1.5em;
   font-size: 2em;
+  margin: .1em;
+  background-color: transparent;
+  border-radius: 33%;
+}
+
+footer button {
+  width: 1.6em;
+  height: 1.2em;
+  font-size: 1.5em;
+  margin: .1em;
+  background-color: transparent;
+  border: none;
 }
 
 #boTxt1, #boTxt2 {
