@@ -1,71 +1,64 @@
 
 
-/*
-############################################################
-############################################################
-######################## VARIÁVEIS #########################
-############################################################
-############################################################
-*/
+
+// ############################################################
+// ############################################################
+// ######################## VARIÁVEIS #########################
+// ############################################################
+// ############################################################
+
 
 // HTML, CSS, JS.
 
 	var htmlP = [ // incluso appinventor
-"article"," aside"," section",
-"header"," main"," footer",
-"ol"," ul",
-"tr"," td","div"," span",
-"caption","cite","dialog","embed","output","small","source","table","bold",
-
-"p","h1...h6","i","blockquote","strong"," em",
-"del"," ins","pre","param","q","hr",
-
-"code"," kbd"," samp"," var",
-
-"th","li","dl","dt",
-"dd","a","abbr","address","area","b",
-"bdo","blockquote","br","caption",
-"dfn",
-
-"keygen","li","link","map","mark",
-"menu","menuitem","output",
-
-"sub","sup","time",
-"tr",
-
-"col","colgroup;",
-
-"nav section","br hr embed source","track area col param wbr",
+// invisíveis
+"header main footer","nav section article aside",
+"div span","link",
+// Wordpress - UI - texto
+"dl dt dd","i","a",
+"h1...h6 p","strong b blockquote","br",
+"ul ol li",
+"del ins","sub sup",
+"em mark",
+"pre code var kbd samp",
+"address","abbr cite","small",
+// table
+"table caption tr td th",
+"colgroup col",
+// UI não texto
+"i span",
+// media
+"map area","source","object param","embed",
+// other
+"keygen","time","hr","q",
+"br hr embed source","track area col param wbr",
+"dfn","bdo",
 ];
 
 
-
 	var htmlR = [
-"artigo","a parte (de lado)"," seção",
-"cabeçalho"," principal"," rodapé",
-"lista ordenada (ordered list)"," lista desordenada (unordered list)",
-"linha da tabela (table row)"," dados da tabela (table data)","divisão (division)","palmo/período/pequena distância",
-"título/subtítulo","citar","diálogo","embutir","saída","pequeno","fonte","tabela","negrito",
-
-"parágrafo (paragraph)","posições (headings)","itálico (italic)","bloco de citação","forte","enfatizado (emphasized)",
-"excluído (deleted)"," inserido (inserted)","pré-formatado (preformatted)","parâmetro (parameter)"," cotação (quotation)","regra horizontal (horizontal rule)",
-
-"código"," teclado (keyboard)","amostra (sample)"," variável (variable)",
-
-"cabeçalho da tabela (table header)","Item da lista (list item)","lista de descrição (description list)","",
-"descrição (description)","âncora/hiperlink (anchor)"," abreviação (abbreviation)","endereço","área","negrito (bold)",
-"bi-directional override","bloco de citação","quebrar/pausa (break)","título/subtítulo",
-"definindo (defining)",
-
-"keygen","item da lista (list item)","ligação","mapa de imagem (image-map)","marcado (marked)",
-"cardápio","item do menu","saída",
-
-"subscrito (subscripted)"," sobrescrito (superscripted)","data hora (date-time)",
-"linha em uma tabela (row in a table)",
-
-"coluna (column)","grupo de colunas (group of columns)",
-
-"elementos semânticos (semantic elements)","tags vazias (ou elementos vazios (Empty element))","tags vazias (ou elementos vazios (Empty element))",
+// invisíveis
+"cabeçalho, principal, rodapé","navegação, seção, artigo, a parte (de lado)",
+"divisão (division), palmo/período/pequena distância","ligação",
+// Wordpress - UI - texto
+"lista de descrição (description list), ?, descrição (description)","itálico (italic)","âncora/hiperlink (anchor)",
+"posições (headings) parágrafo (paragraph)","forte, negrito (bold), bloco de citação","quebrar/pausa (break)",
+"lista desordenada (unordered list), lista ordenada (ordered list), item da lista (list item)",
+"excluído (deleted) inserido (inserted)","subscrito (subscripted), sobrescrito (superscripted)",
+"enfatizado (emphasized), marcado (marked)",
+"pré-formatado (preformatted), código, variável (variable; é mostrado em itálico), teclado (keyboard), amostra (sample)",
+"endereço","abreviação (abbreviation), citar (título de uma obra)","pequeno",
+// table
+"tabela, título/subtítulo/legenda (de tabela), linha da tabela (table row), dados da tabela (table data), cabeçalho da tabela (table header)",
+"grupo de colunas (group of columns), coluna (column)",
+// UI não texto
+"elementos usados ​​para adicionar ícones",
+// media
+"mapa de imagem (image-map), área (ambas relativas à imagem)","fonte (mídia)","objeto parâmetro (parameter)","embutir (mídia)",
+// other
+"par de chaves (pública-privada)","data hora (date-time)","regra horizontal (horizontal rule)","cotação (quotation) (citação curta)",
+"tags vazias, elementos vazios; empty element","tags vazias, elementos vazios, empty element",
+"definindo (defining)","bi-directional override",
 ];
 
 
@@ -104,65 +97,83 @@
 
 
 
-	var html2P = [
-"document type",
-"html","head, body","style, script","meta, title, link",
-"link meta base","base",
+	var html2P = [		// head
+"!DOCTYPE html",
+"head body","style script","meta",
+"link","base",
+"title",
 ];
 
 	var html2R = [
-"tipo de documento",
-"","cabeça, corpo","estilo, script","metadados (metadata), título, ligação",
-"","",
+"",
+"cabeça, corpo","estilo, script","metadados (metadata)",
+"ligação","",
+"título",
 ];
 
 	var html2RReEx = [	// UPDATE - ESTE CAMPO NÂo EXISTE
-"referente ao !DOCTYPE",
-"referente a Linguagem de Marcação de Hipertexto","","","",
-"tags vazias (ou elementos vazios (Empty element))","base",
+"instrução que diz ao navegador a versão do HTML",
+"","","",
+"","",
+"",
 ];
 
 
 
 
-	var html3P = [ //appinventor (HTML - atributos)
-"src alt title","id class",
-"action","autocomplete","autofocus","autoplay","border","charset","checked",
-"cite","content","controls","disabled","download","height","high",
-"href","kind","label","lang","low","max","maxlength",
-"minlength","media","method","min","name","placeholder","rel","required",
-"rows","selected","size","style","target","type","value","width",
-// Atributo  booleano
-"hidden",
-// Atributo de evento
-"onerror","onload", // Window Event Attributes
-"onblur","onchange","onfocus","onselect","onsubmit", // Form Events
-"onkeydown","onkeypress","onkeyup", // Keyboard Events
-"onclick","onmouseout","onmouseover","onmousemove", // Mouse Events
-"ondrag","ondrop", // Drag Events
+	var html3P = [ //appinventor (HTML - atributos, attribute)
+"name content",
+"href title","src title alt",
+"id class",
+"action method","border","charset",
+"cite",
+"download",
+"kind","label","lang","low","min max","minlength maxlength",
+"media","placeholder autocomplete","rel",
+"rows cols","size","style","target","type","width height",
+// Atributo usado, por ex., em tag input
+"type value(exceto image) disabled form name",
+// Atributo Booleano
+"checked required autofocus",
+"hidden defer disabled selected",
+"autoplay controls loop muted",
+// Atributo de Evento
+"onerror onload", // Window Event Attributes
+"onblur onchange onfocus onselect onsubmit", // Form Events
+"onkeydown onkeypress onkeyup", // Keyboard Events
+"onclick onmouseout onmouseover onmousemove", // Mouse Events
+"ondrag ondrop", // Drag Events
 "oncopy", // Clipboard Events
-"onpause","onplay","onvolumechange", // Media Events
+"onpause onplay onvolumechange", // Media Events
 "ontoggle", // Misc Events
 ];
 
 	var html3R = [
-"Atributo","Atributo",
-"Atributo","Atributo","Atributo","Atributo","Atributo","Atributo","Atributo",
-"Atributo","Atributo","Atributo","Atributo","Atributo","Atributo","Atributo",
-"Atributo","Atributo","Atributo","Atributo","Atributo","Atributo","Atributo",
-"Atributo","Atributo","Atributo","Atributo","Atributo","Atributo","Atributo","Atributo",
-"Atributo","Atributo","Atributo","Atributo","Atributo","Atributo","Atributo","Atributo",
-// Atributo  booleano
-"escondido; atributo  booleano",
+"Atri. usado em tag meta",
+"Atri. usado em tag a","Atri. usado em tag img",
+"identifier, class",
+"Atributo","Atributo","Atributo",
+"Atributo",
+"Atributo",
+"Atributo","Atributo","Atributo","Atributo","Atributo (por ex. tag input)","Atributo (por ex. tag input)",
+"Atributo","Atributo (por ex. tag input)","Atributo",
+"Atributos (para tag textarea)","Atributo","Atributo","Atributo","Atributo","largura altura",
+// Atributo usado, por ex., em tag input
+"atri. usado tag input",
+// Atributo booleano
+"atri. booleano (tag input): ?, ?, ? ",
+"atri. booleano: escondido, ?, ?, ?",
+"atri. booleano: ?, ?, ?, ?",
+
 //Atributo de evento
-"Atributo de evento","Atributo de evento",
-"Atributo de evento","Atributo de evento","Atributo de evento","Atributo de evento","Atributo de evento",
-"Atributo de evento","Atributo de evento","Atributo de evento",
-"Atributo de evento","Atributo de evento","Atributo de evento","Atributo de evento",
-"Atributo de evento","Atributo de evento",
-"Atributo de evento",
-"Atributo de evento","Atributo de evento","Atributo de evento",
-"Atributo de evento",
+"atri. de evento: Window Event Attributes",
+"atri. de evento: Form Events",
+"atri. de evento: Keyboard Events",
+"atri. de evento: Mouse Events",
+"atri. de evento: Drag Events",
+"atri. de evento: Clipboard Events",
+"atri. de evento: Media Events",
+"atri. de evento: Misc Events",
 ];
 
 
@@ -190,18 +201,23 @@ var html4P = [
 "figure img figcaption","audio source","video source track",
 "object","iframe",
 
-"fieldset","fieldset legend form","label","input button textarea select option label",
-"fieldset legend","label","select","input",
-"select option","select optgroup option","textarea","datalist option",
+"fieldset legend form label",
+"input button textarea select option",
+"select","input",
+"select option","select optgroup option",
+"textarea","datalist option",
 
-"type='checkbox' type='radio'","type='button' type='submit' type='reset' type='image'",
-"type='range' type='color' type='date' type='file'","type='number' type='tel' type='text'",
-"type='text' type='email' type='password' type='search' type='url'",
+"input type='text' input type='password'",
+"input type='checkbox' input type='radio'",
+"input type='button' input type='submit' value='Enviar' input type='reset' input type='image'",
+"input type='range' input type='color' input type='date' input type='file'",
+"input type='number' input type='tel'",
+"input type='email' input type='search' input type='url'",
+"output",
 
-"meter","progress","svg","canvas",
-"i span","span",
-
-"details summary",
+"details summary dialog",
+// Elementos Gráficos (Tags visuais)
+"meter progress","svg","canvas",
 ];
 
 
@@ -209,55 +225,76 @@ var html4R = [
 "Media: figura, imagem (image), legenda da figura (figure caption)","Media; áudio, fonte","Media; vídeo, fonte, faixas de texto (text tracks)",
 "Media. Objeto. Incorpora elemento multimídia como arquivo pdf, áudio, vídeo...","Media. Inline frame, inseri uma página dentro doutra",
 
-"conjunto de campos, agrupa os campos","conjunto de campos, legenda, formulário","etiqueta, rótulo","elementos mais comuns: entrada, botão, área de texto...",
-"conjunto de campos, legenda","rótulo","usado em caixas de listagem e caixas de menu suspenso","entrada",
-"selecionar, opção","selecionar, grupo de opções (option group), opção","colher informações como comentários, sugestões, reclamações; ou escrever um currículo, texto maior","",
+"conjunto de campos, legenda, formulário, etiqueta/rótulo",
+"elementos mais comuns: entrada, botão, área de texto...",
+"usado em caixas de listagem e caixas de menu suspenso","entrada",
+"selecionar, opção","selecionar, grupo de opções (option group), opção",
+"colher informações como comentários, sugestões, reclamações; ou escrever um currículo, texto maior","",
 
-"atributo tag input","atributo tag input",
-"atributo tag input","atributo tag input",
-"atributo tag input",
+"tipos de input (entrada)",
+"tipos de input (entrada)",
+"tipos de input (entrada)",
+"tipos de input (entrada)",
+"tipos de input (entrada)",
+"tipos de input (entrada)",
+"saída (mostra resultado de um cálculo ou ação do usuário, contexto de formulário)",
 
-"medidor, elemento gráfico","elemento gráfico","permite gráficos baseados em vetor","tela (de pintura); pode ser usado para desenhar gráficos",
-"elementos usados ​​para adicionar ícones","palmo, período",
 
-"detalhes, resumo",
+"detalhes, resumo; diálogo (caixa de diálogo; relativo a pop-up, modal)",
+// Elementos Gráficos (Tags visuais)
+"medidor, ?","permite gráficos baseados em vetor","tela (de pintura); pode ser usado para desenhar gráficos",
 ];
 
 
 
 	var css2P = [	// css, incluso app inventor
-"animation | animation-duration | animation-name","justify-content:","display:","background:","background-image:","background-color:","background-repeat:",
-"background-position:","background-size:","background-attachment:","border:","border-style:","border-width:","border-color:","border-top:",
-"border-bottom:","border-radius:","box-shadow:","box-sizing:","color:","cursor:","font:","font-size:",
-"font-family:","font-weight:","font-style:","line-height:","text-height",
-"margin:","margin-right:","margin-bottom:","margin-left:",
-"padding:","padding-top:","padding-right:",
+"animation | animation-duration | animation-name","display:",
+"background:","background-image:","background-repeat:",
+"background-position:","background-size:","background-attachment:",
+"border-style:","border-width:","border-color:","border-top:",
+"border-bottom:","","box-sizing:","color: background-color:","cursor:",
+"font:","font-size: font-family:","font-weight: font-style:",
+"line-height:","text-height",
+"margin: padding:","margin-top: margin-bottom:","margin-left: margin-right:",
+"padding-top: padding-right:",
 
-"position:","color:","top:","left:","right:","bottom:","clear:","clip:","letter-spacing:","transition:",
-"text-align: | text-indent:","text-decoration:","text-shadow:","text-transform:",
-"z-index:","filter","width:","direction:","float:","height:","overflow:",
-"list-style:","opacity:","visibility","justify-content:","align-items:","flex-direction:",
-"transform","vertical-align",
-"ul {list-style: none;}","a {text-decoration: none;}",
-"",
-"","",
+"position: top: left: right: bottom:","clear:","clip:",
+"letter-spacing: word-spacing:","transition:",
+"text-align: | text-indent:","text-decoration:","text-shadow: box-shadow:",
+"text-transform:",
+"z-index:","direction:","float:","overflow:",
+"list-style:",
+"opacity: visibility: filter:",
+"flex: flex-direction:","justify-content: align-items:",
+"vertical-align:",
+"width: height:","border: border-radius:",
+"transform:",
 ];
-	var css2R = [
-"animação | duração da animação | nome da animação","justificar o conteúdo","exibir, exibição","fundo","imagem de fundo","cor de fundo","repetição de fundo",
-"posição de fundo","tamanho de fundo","anexo de fundo","borda","estilo de borda","largura da borda","cor da borda","fronteira superior",
-"fronteira inferior","raio da borda","sombra da caixa","dimensionamento da caixa","cor","cursor","fonte","tamanho da fonte",
-"família de fontes","peso da fonte, espessura","estilo de fonte","altura da linha",
-"margem","margem direita","margem inferior","margem esquerda",
-"preenchimento","preenchimento superior","preenchimento direito",
 
-"posição:","cor","topo","esquerda","direita","inferior","claro","grampo","espaçamento entre letras","transição",
-"alinhamento de texto | recuo do texto","decoração de texto","sombra de texto","transformação de texto",
-"ordem-z","filtro","largura","direção","flutuar","altura","transbordar",
-"estilo de lista","opacidade","visibilidade","justificar o conteúdo","alinhar itens:","direção fexível",
-"","",
-"tira a bolinha da lista","tira o sublinhado da âncora",
-"",
-"","",
+
+
+	var css2R = [
+"animação | duração da animação | nome da animação","exibir, exibição",
+"fundo","imagem de fundo","repetição de fundo",
+"posição de fundo","tamanho de fundo","anexo de fundo",
+"estilo de borda","largura da borda","cor da borda","fronteira superior",
+"fronteira inferior","","dimensionamento da caixa","cor, cor de fundo","cursor",
+"fonte","tamanho da fonte, família de fontes","peso da fonte (espessura), estilo de fonte",
+"altura da linha","",
+"margem, preenchimento","margem superior, margem inferior","margem esquerda, margem direita",
+"preenchimento superior, preenchimento direito",
+
+"posição, topo, esquerda, direita, inferior","claro","grampo",
+"espaçamento entre letras, palavras","transição",
+"alinhamento de texto | recuo do texto","decoração de texto","sombra de texto, sombra da caixa",
+"transformação de texto",
+"ordem-z","direção","flutuar","transbordar",
+"estilo de lista",
+"opacidade, visibilidade, filtro",
+"flexíonar, direção fexível","justificar o conteúdo, alinhar itens:",
+"alinhamento vertical (por ex. célula de tabela)",
+"largura, altura","borda, raio da borda",
+"tranformar (rotate, scale, skew...)",
 ];
 
 
@@ -266,18 +303,18 @@ var html4R = [
 
 
 /*
-//Palavras reservadas pelo browser
+// Palavras reservadas pelo browser
 "alert, blur, closed, document, focus, frames, history, innerHeight, innerWidth",
 "length, location, navigator, open, outerHeight, outerWidth, parent",
 "screen, screenX, screenY, statusbar, window",
-//Palavras reservadas
+// Palavras reservadas
 "break, case, catch, continue, debugger, default, delete, do, else",
 "false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof",
 "var, void, while, with",
 // Operador
 ".","typeof()","this","new","delete","in","instanceof",
 
-//Palavras reservadas pelo browser
+// Palavras reservadas pelo browser
 "Palavras reservadas pelo browser",
 "Palavras reservadas pelo browser",
 "Palavras reservadas pelo browser",
@@ -288,6 +325,10 @@ var html4R = [
 // Operador
 "op -acessa propriedade de um objeto.","op - tipo de","op","op","op","op","op",
 */
+
+
+
+
 
 	var cssP = [	// objetos nativos (objetos globais)
 ".length","toUpperCase()","concat()",
@@ -332,7 +373,7 @@ var html4R = [
 "play()","load()","pause()",
 
 "arc()",
-"document.createElement()",
+"document.createElement() ",
 "getContext()","fillRect()",
 
 // propriedade
@@ -350,6 +391,8 @@ var html4R = [
 // outros
 ];
 
+
+// document.body.appendChild() [estava em uso numa versão desse app de backup]
 
 	var css3R = [
 // método
@@ -401,10 +444,12 @@ var html4R = [
 	var cssCP = [
 "lightgreen darkgreen","lightblue darkblue","lightsalmon darksalmon","lightgray darkgray",
 "lightgrey darkgrey","lightseagreen darkseagreen","lightcyan darkcyan","lightskyblue blueviolet",
-"silver gold","olive chocolate brown","lightcoral lightpink","pink darkred",
+"silver gold","olive chocolate brown","lightcoral","red darkred",
+"lightyellow darkyellow","lightpink pink","orange darkorange","",
 ];
 
 	var cssCR = [
+"","","","",
 "","","","",
 "","","","",
 "","","","",
@@ -462,7 +507,7 @@ var emojP = [
 "keydown","keypress","keyup",
 "mouseout",
 "keydown keypress keyup","onclick onmousemove onmouseover onmouseout",
-/* Audio/Video Events (fonte: mozilla) */
+// Audio/Video Events (fonte: mozilla)
 "play","pause","playing","progress",
 "canplay","durationchange","ended",
 "seeking","waiting",
@@ -472,7 +517,7 @@ var emojP = [
 "","","",
 "",
 "","",
-/* Audio/Video Events */
+// Audio/Video Events 
 "Audio/Video Events","Audio/Video Events","Audio/Video Events","Audio/Video Events",
 "Audio/Video Events","Audio/Video Events","Audio/Video Events",
 "Audio/Video Events","Audio/Video Events",
@@ -571,74 +616,97 @@ var reseR = [
 ];
 
 
-/* O "S" em "cssS" significa pSeudo-class. */
+
+
+
+// O "S" em "cssS" significa pSeudo-class.
 var cssSP = [
-":checked",":fullscreen",":modal",":enabled",":disabled",":placeholder-shown",":required",
-":optional",":user-invalid",":lang()",":target",":playing",":paused",
-":root",":empty",":first-child",":last-child",":only-child",
-":link | :visited | :hover | :active",
-":link | :visited | :hover | :active",
-":focus",":focus-visible",
-"Pseudo-classe",
-".btn:hover {}",".modal:target {}","nav li a:hover {color: red;}",
-
-/* dois pontos antes são os Pseudo-elements */
-"::after","::before","::backdrop","::first-letter","::first-line","::placeholder",
-"Pseudo-elemento",
-
-/* Seletor*/
-"# | .",
-"[autoplay] | [atrib] | [atrib=valor] | [atrib$=valor] | outros",
-"* {padding: 0; margin: 0;}",
-"[type='button'] {}",
-
-/* Combinador*/
+"[atrib]",
+"[atrib=valor]",
+"ul + li",
+// Pseudo-class (a colon (:) [ft mozilla]
+":enabled :checked :disabled :optional :placeholder-shown :required :user-invalid",
+":modal :fullscreen",
+"button:hover {} :focus :focus-visible",
+".modal:target {}",
+":playing :paused",
+":root :empty :first-child :last-child :nth-child() :only-child",
+":lang()",
+"a:link a:visited a:hover a:active",
+"a:link a:visited a:hover a:active",
+// Pseudo-elements (double colons (::)) [ft: mozilla]
+"::after ::before ::backdrop ::first-letter ::first-line ::placeholder",
+// Seletor
+"# . *",
+// Combinador
 "div span",
 "ul > li",
 "p ~ span",
 "ul + li",
-"espaço | > | + | ~",
+"espaço ~ + >",
+];
+
+/*
+// Seletor
+"[autoplay] | [atrib$=valor] | outros",
+"* {padding: 0; margin: 0;}",
+"[type='button'] {}",
+
+*/
+
+var cssSR = [
+"seletor por atributo",
+"seletor por atributo",
+"seletor adjacente +: foca no elemento que se segue a um anterior",
+// Pseudo-class (a colon (:) [ft mozilla]
+"pseudo-class de entrada (de formulário)",
+"pseudo-class de estado de exibição",
+"pseudo-class de ação do usuário",
+"pseudo-class de localização",
+"pseudo-class de estado de recurso",
+"pseudo-class estruturais de árvore",
+"pseudo-class linguísticas",
+"LVHA ('love and hate'), recurso pra lembrar dessas pseudo-classe referentes à tag a ",
+"link não visitado, link visitado, ponteiro do mouse passa sobre algo, link ativado (ao clicar)",
+// Pseudo-elements (double colons (::)) [ft: mozilla]
+"pseudo-elements",
+// Seletor
+"seletores: identifier, class, universal",
+// Combinador
+"combinador espaço (descendant selector, seletor de descendentes): se x for descendente de y; seleciona nós que são filhos do elemento principal; pai, avô, tataravô",
+"combinador > (child selector, seletor filho, seletor de filhos): seleciona nós que são filhos diretos do elemento especificado anteriormente; filho",
+"combindor ~ (general sibling selector, seletor geral de irmãos): seleciona todo elemento span após p, se ambos dentro de um mesmo elemento pai",
+"combinador + (adjacent sibling selector, seleciona irmãos adjacentes): nós que se seguem imediatamente o elemento principal",
+"combinadores (combinators); um combinador combina outros seletores",
 ];
 
 
-var cssSR = [
-"","","","","","","",
-"","","","","","",
-"","","","","",
-"LVHA; relativas à tag a",
-"link não visitado, link visitado, ponteiro do mouse passa sobre algo, link ativado (ao clicar)",
-"","",
+/*
 "seleciona elementos baseados em informaçãoes que não estão na árvore de documentos, ou que é complexa de se extrair. Ex.: se um link foi visitado anteriormente.",
 "exemplo","exemplo","muda cor do link ao passar mouse por cima",
 
-/* dois pontos antes são os Pseudo-elements */
-"","","","","","",
-"Abstração da árvore que representa entidade além do que o HTML faz. Ex.: um elemento que descreva a primeira letra ou linha de um parágrafo, marcador de uma lista.",
+// dois pontos antes são os Pseudo-elements 
+// "Abstração da árvore que representa entidade além do que o HTML faz. Ex.: um elemento que descreva a primeira letra ou linha de um parágrafo, marcador de uma lista.",
 
-/* Seletor*/
+// Seletor
 "seletor '#' escolhe nós baseados no valor do atributo id | seletor '.' escolhe elementos baseados no valor de seu atributo class",
 "seletores por atributo; o [autoplay] corresponde a todos os elementos que possuirem o atributo autoplay (para qualquer valor)",
 "seletor universal",
 "seleciona os elementos do tipo button",
 
-/* Combinador*/
-"combinador espaço; descendant selector, seletor de descendentes; seleciona nós que são filhos do elemento principal; equivale a se x for descendente de y",
-"combinador >; child selector; seletor filho, seletor de filhos; seleciona nós que são filhos diretos do elemento especificado anteriormente",
-"combindor ~; general sibling selector; seletor geral de irmãos; seleciona todo elemento span após p, se ambos dentro de um mesmo elemento pai",
-"combinador +; adjacent sibling selector; seleciona irmãos adjacentes; nós que se seguem imediatamente o elemento principal".
-"combinadores; um combinador combina outros seletores",
+
 ];
+*/
 
 
-
-/* Termo "jsEc" significa JS Estrutara de Controle. */
+// Termo "jsEc" significa JS Estrutara de Controle.
 var jsEcP = [
 "if | else | else if | switch",
 "if () {}",
 "if () {} else {}",
 "if () {} else if () {} else {}",
 
-/* Estrutura de repetição */
+// Estrutura de repetição 
 "for | while | do...while",
 "for () {}",
 "for (índice in objeto) {}",
@@ -652,7 +720,7 @@ var jsEcR = [
 "else",
 "else if",
 
-/* Estrutura de repetição */
+// Estrutura de repetição
 "Estruturas de Repetição",
 "for (inicilização; condição; incremento) {}",
 "for in",
@@ -693,24 +761,24 @@ var opeR = [
 "unário","referência ao objeto atual","separar valores","indexar arrays","acessa propriedade de um objeto","chama uma função",
 "retorna o tipo do operando","cria nova instância do objeto",
 ];
-
-
-
-
+alert(opeR);
 /*
-############################################################
-############################################################
-############### FUNÇÔES PRINCIPAIS #########################
-############################################################
-############################################################
 */
+
+
+// ############################################################
+// ############################################################
+// ############### FUNÇÔES PRINCIPAIS #########################
+// ############################################################
+// ############################################################
+
 
 // random, falar...
 
 function ran (n) { return Math.floor(Math.random() * n); } // Cria nº aleatório; ran é random é n é number. Esta função ajuda a outras.
 
 
-/* Função "falar()" excluída daqui ! ! ! */
+// Função "falar()" excluída daqui ! ! !
 
 function mudaPosicao() {	// Campo texto em inglês de forma aleatória.
 var h1 = document.querySelector("#p6");

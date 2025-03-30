@@ -3,12 +3,23 @@
 
 
 
+/*
+############################################################
+############################################################
+######################## NOVO - NÃo CRIADO #################
+############################################################
+############################################################
+*/
 
 
+	var unicP = [ // incluso appinventor
+"⌂","⌨","✓",
+];	
+	
 
-
-
-
+	var unicR = [
+"house","keyboard","check mark",
+];	
 
 
 /*
@@ -730,6 +741,15 @@ document.querySelector('#p5').innerHTML = c[i]; // c é o array emoji.
 	}
 */
 
+
+
+		function unic () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
+var i = `${ran(unicP.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= unicP[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = unicR[i]; // Idem no display resposta.
+//document.querySelector('#p5').innerHTML = htmlR[i]; // Idem no display emoji.
+	}
+
 		function andr3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
 var i = `${ran(andr3P.length)}`; // guarda um índice aletatório. 
 document.querySelector('#p6').innerHTML= andr3P[i]; // Escreve o array no Display pergunta, conforme índice.
@@ -832,6 +852,9 @@ document.querySelector('#p7').innerHTML = markR[i]; // Idem no display resposta.
 
 		document.getElementById("mark").addEventListener("click",mark);
 		document.querySelector('#mark').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "MARKDOWN";});
+
+		document.getElementById("unic").addEventListener("click",unic);  // seleciona id, associa função
+		document.querySelector('#unic').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "UNICODE";});
 	
 	}
 window.addEventListener("load",addEvents);
