@@ -741,76 +741,21 @@ document.querySelector('#p5').innerHTML = c[i]; // c é o array emoji.
 	}
 */
 
-
-
-		function unic () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
-var i = `${ran(unicP.length)}`; // guarda um índice aletatório. 
-document.querySelector('#p6').innerHTML= unicP[i]; // Escreve o array no Display pergunta, conforme índice.
-document.querySelector('#p7').innerHTML = unicR[i]; // Idem no display resposta.
-//document.querySelector('#p5').innerHTML = htmlR[i]; // Idem no display emoji.
+		function geral (a, b) { // faz o mesmo que função abaixo, mas com passagem de parâmetro. Na execução,  a = pergunta (por ex. unicP), b = resposta.
+var i = `${ran(a.length)}`; // guarda um índice aletatório. 
+document.querySelector('#p6').innerHTML= a[i]; // Escreve o array no Display pergunta, conforme índice.
+document.querySelector('#p7').innerHTML = b[i]; // Idem no display resposta.
+//docu. var ment.querySelector('#p5').innerHTML = htmlR[i]; // Idem no display emoji.
 	}
 
-		function andr3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
-var i = `${ran(andr3P.length)}`; // guarda um índice aletatório. 
-document.querySelector('#p6').innerHTML= andr3P[i]; // Escreve o array no Display pergunta, conforme índice.
-document.querySelector('#p7').innerHTML = andr3R[i]; // Idem no display resposta.
-//document.querySelector('#p5').innerHTML = htmlR[i]; // Idem no display emoji.
-	}
 
-		function ubun3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
-var i = `${ran(ubun3P.length)}`; // guarda um índice aletatório. 
-document.querySelector('#p6').innerHTML= ubun3P[i]; // Escreve o array no Display pergunta, conforme índice.
-document.querySelector('#p7').innerHTML = ubun3R[i]; // Idem no display resposta.
-	}
-
-		function wind3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
-var i = `${ran(Wind3P.length)}`; // guarda um índice aletatório. 
-document.querySelector('#p6').innerHTML= Wind3P[i]; // Escreve o array no Display pergunta, conforme índice.
-document.querySelector('#p7').innerHTML = Wind3R[i]; // Idem no display resposta.
-	}
-
-		function comp3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
-var i = `${ran(comp3P.length)}`; // guarda um índice aletatório. 
-document.querySelector('#p6').innerHTML= comp3P[i]; // Escreve o array no Display pergunta, conforme índice.
-document.querySelector('#p7').innerHTML = comp3R[i]; // Idem no display resposta.
-	}
-
-		function hard3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
-var i = `${ran(hard3P.length)}`; // guarda um índice aletatório. 
-document.querySelector('#p6').innerHTML= hard3P[i]; // Escreve o array no Display pergunta, conforme índice.
-document.querySelector('#p7').innerHTML = hard3R[i]; // Idem no display resposta.
-	}
-
-		function soft3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
-var i = `${ran(soft3P.length)}`; // guarda um índice aletatório. 
-document.querySelector('#p6').innerHTML= soft3P[i]; // Escreve o array no Display pergunta, conforme índice.
-document.querySelector('#p7').innerHTML = soft3R[i]; // Idem no display resposta.
-	}
-
-		function segu3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
-var i = `${ran(SegPc.length)}`; // guarda um índice aletatório. 
-document.querySelector('#p6').innerHTML= SegPc[i]; // Escreve o array no Display pergunta, conforme índice.
-document.querySelector('#p7').innerHTML = SegRc[i]; // Idem no display resposta.
-	}
-
-		function rede3 () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
-var i = `${ran(RedPc.length)}`; // guarda um índice aletatório. 
-document.querySelector('#p6').innerHTML= RedPc[i]; // Escreve o array no Display pergunta, conforme índice.
-document.querySelector('#p7').innerHTML = RedRc[i]; // Idem no display resposta.
-	}
-
-		function emoj () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
-var i = `${ran(emojP.length)}`; // guarda um índice aletatório. 
-document.querySelector('#p6').innerHTML= emojP[i]; // Escreve o array no Display pergunta, conforme índice.
-document.querySelector('#p7').innerHTML = emojR[i]; // Idem no display resposta.
-	}
-
+/*
 		function mark () { 	// Sorteia um índice, e dele escreve o correspondente termo em inglês, português e emoji.
 var i = `${ran(markP.length)}`; // guarda um índice aletatório. 
 document.querySelector('#p6').innerHTML= markP[i]; // Escreve o array no Display pergunta, conforme índice.
 document.querySelector('#p7').innerHTML = markR[i]; // Idem no display resposta.
 	}
-
+*/
 
 
 
@@ -827,33 +772,39 @@ document.querySelector('#p7').innerHTML = markR[i]; // Idem no display resposta.
 			// inicialização de eventos; onclick.
 	function addEvents () {
 		// SCREEN 3		
-		document.getElementById("hard3").addEventListener("click",hard3);
+		document.getElementById("hard3").addEventListener("click", function () { geral(hard3P, hard3R); } );
 		document.querySelector('#hard3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "HARDWARE";});		
-		document.getElementById("soft3").addEventListener("click",soft3);
+		document.getElementById("soft3").addEventListener("click", function () { geral(soft3P, soft3R); } );
 		document.querySelector('#soft3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "SOFTWARE";});		
 
-		document.getElementById("andr3").addEventListener("click",andr3);
-		document.querySelector('#andr3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "ANDROID";});		
-		document.getElementById("ubun3").addEventListener("click",ubun3);
+		document.getElementById("andr3").addEventListener("click", function () { geral(andr3P, andr3R); } );
+		document.querySelector('#andr3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "ANDROID";});	
+
+		document.getElementById("unic").addEventListener("click", function () { geral(unicP, unicR); } );  // seleciona id, associa função
+		document.querySelector('#unic').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "UNICODE";});
+	
+
+	
+		document.getElementById("ubun3").addEventListener("click", function () { geral(ubun3P, ubun3R); } );
 		document.querySelector('#ubun3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "UBUNTU";});		
-		document.getElementById("wind3").addEventListener("click",wind3);
+		document.getElementById("wind3").addEventListener("click", function () { geral(Wind3P, Wind3R); } );
 		document.querySelector('#wind3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "WINDOWS";});		
 		
-		document.getElementById("comp3").addEventListener("click",comp3);
+		document.getElementById("comp3").addEventListener("click", function () { geral(comp3P, comp3R); } );
 		document.querySelector('#comp3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "COMPUTING";});		
-		document.getElementById("segu3").addEventListener("click",segu3);
+		document.getElementById("segu3").addEventListener("click", function () { geral(SegPc, SegRc); } );
 		document.querySelector('#segu3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "SAFETY";});		
 		
-		document.getElementById("rede3").addEventListener("click",rede3);
+		document.getElementById("rede3").addEventListener("click", function () { geral(RedPc, RedRc); } );
 		document.querySelector('#rede3').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "WEB";});	
 
-		document.getElementById("emoj").addEventListener("click",emoj);
+		document.getElementById("emoj").addEventListener("click", function () { geral(emojP, emojR); } );
 		document.querySelector('#emoj').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "EMOJI";});
 
-		document.getElementById("mark").addEventListener("click",mark);
+		document.getElementById("mark").addEventListener("click", function () { geral(markP, markR); } );
 		document.querySelector('#mark').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "MARKDOWN";});
 
-		document.getElementById("unic").addEventListener("click",unic);  // seleciona id, associa função
+		document.getElementById("unic").addEventListener("click", function () { geral(unicP, unicR); } );  // seleciona id, associa função
 		document.querySelector('#unic').addEventListener('click', function () {document.querySelector(".display3").innerHTML = "UNICODE";});
 	
 	}
