@@ -1,53 +1,28 @@
 
-
-/* NOVO do "guri_d"*/
-/* NOVO do "guri_d"*/
-/* NOVO do "guri_d"*/
-
-
-#newDIV2 {
-  //background-color: lightyellow;
-  //margin-top: 1.5em;
-  //border-radius: 6em 3em 0em 0em;
-  //height: 40%;
-}
-
 #p5 {
 	position: absolute;
 	top: 2em;
 	left: -32%;
-	font-size: 3.5em;
-	padding: 1em;
+	font-size: 4em;
+	//padding: 1em;
 }
+
 
 #p6 {
 	position: absolute;
 	top: 6.1em;
 	left: 20%;
-	color: whitesmoke;
-	min-width: 5em;
-	font-size: 1.3em;
 	font-weight: bold;
-	box-shadow: inset 0 0 9px black, inset 0px 0 66px gray;
-	border-radius: 0.5em;
-	padding: 0.1em 0.5em;
+	background-color: white;
 }
 
 #p7 {
 	position: absolute;
-	top: 2.2em;
-	left: 22%;
-	color: white;
-	font-size: 1em;
-	text-shadow: 1px 2px black;
+	top: 200px;
+	left: 2%;
+	background-color: pink;
+	font-size: 0.8em;
 }
-
-
-
-/* NOVO do "guri_d"*/
-/* NOVO do "guri_d"*/
-/* NOVO do "guri_d"*/
-
 
 * {
 	margin: 0;
@@ -55,55 +30,65 @@
 }
 
 body {
-	background-color: lightslategray;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+body {
+	//background-color: lightgreen;
 	font-family: "mv boli", sans-serif;
 	margin: 0;
 	//width: 100vw;
 	height: 100vh;
 }
 
-#btL, #btR {
-	position: absolute;
-	top: 44%;
-	background-color: white;
-	padding-top: 0.4em;
-	padding-bottom: 0.4em;
+
+#btL {
+	order: 2;
+	padding-bottom: 9em;
 }
 
 #btL {
-	border-radius: 0em 0.5em 0.5em 0em; 
+	top: 68%;
+	background-color: lightblue;
+	text-align: center;
 }
 
+#newDIV2 {
+	height: 44px;
+}
 
 #btR {
-	border-radius: 0.5em 0em 0em 0.5em; 
-	right: 0;
+	flex: 1;
 }
 
-#btL button, #btR button {
-  width: 3.1em;
-  height: 3.1em;
+#btR {
+	top: 34%;
+	//background-color: lightyellow;
+	text-align: center;
+}
+
+#btL button {
+  width: 2em;
+  height: 2em;
+}
+
+#btR button {
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 2em;
 }
 
 #boTxt1, #boTxt2 {
 	text-transform: uppercase;
-	font-size: 0.7em;
-}
-
-#boTxt1 {
-	text-align: right;
-	margin-right: 0.5em;
-}
-
-#boTxt2 {
-	text-align: left;
-	margin-left: 0.5em;
+	font-size: 0.8em;
 }
 
 img {
-	width: 100%;
-	height: 100%;
-	border-radius: 2em;
+	width: 40%;
+	height: 50%;
+	padding-left: 30%;
 }
 
 
@@ -113,30 +98,27 @@ img {
 /* Media Queries
 --------------------------------------------- [DAKI PRA BAIXO É O LAYOUT DISPLAY CELULAR] */
 /* Abaixo, em @media, antes estava em 768px mas coloquei em 480px da minha cabeça (pois não me lembro de ter visto este número sendo usado antes). */
+
+
 @media all and (max-width : 480px) {
 
 			img {
-				height: 26%;
-				margin-top: 2em;
+				height: 230px;
+				width: 100%;
 				border-radius: 0;
-				border-top: 1.5em solid gray;
-				border-bottom: 1.5em solid gray;
+				padding-left: 0%;
 			}
 					
 			.bts img {
-				height: 1.2em;		/* tamanho da img de logo nos botões; exatamente onde não foi possível pôr um emoji. */
+				height: 1.2em;
 				width: 1.2em;
-				border: 0em; /* está propriedade e valor é importante porque se não houver prevalecerá o valor de border-top e bottom declarado em img acima. */
-				margin: 0em; /* se não houver este valor valerá o valor de margin-top acima na outra declaração de img. */
+				border: 0em;
+				margin: 0em;
 			}
 
 			.bts button {
-				border-radius: 0px;
+				//border-radius: 0	;
 			}			
-
-			aside button {
-				font-size: 1em;			
-			}
 
 }
 
