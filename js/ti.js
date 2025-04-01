@@ -12,13 +12,45 @@
 */
 
 
-	var unicP = [ // incluso appinventor
+	var unicP = [ // Unicode
 "⌂","⌨","✓",
+"▢","▮","⌕",
+"◧","◐","",
+// Mathematical symbols
+"⋯","≡","⋮","",
+// Dingbats
+"✘","✉","❄","✆",
+// Geometric Shapes
+"▶","●","",
+// Miscellaneous Symbols
+"☰","☠","☁",
+"☼","☾","♩",
+"♨","⚠","♥",
+"☻","☌","♞",
+// Miscellaneous Technical
+"","","",
+"","","",
 ];	
 	
 
 	var unicR = [
 "house","keyboard","check mark",
+"white square with rounded corners","black vertical rectangle","telephone recorder",
+"square with left half black","circle with left half black","",
+// Mathematical symbols
+"midlinee horizontal ellipsis","identical to","vertical ellipsis","",
+// Dingbats
+"heavy ballot X","envelope","snowflake","telephone location sign",
+// Geometric Shapes
+"black right-pointing triangle","black circle","",
+// Miscellaneous Symbols
+"trigram for heaven","skull and crossbones","cloud",
+"white sun with rays","last quarter moon","quarter note",
+"hot springs","warning sign","black heart suit",
+"black smiling face","conjunction","black chess knight",
+// Miscellaneous Technical
+"","","",
+"","","",
 ];	
 
 
