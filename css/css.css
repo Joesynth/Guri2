@@ -46,10 +46,10 @@ body {
 
 footer {
 	order: 2;
-	padding-bottom: 9em;
-
+	padding-bottom: 8em;
+	padding-top: 1em;
 	top: 68%;
-	background-color: lightblue;
+	background-color: #eee;
 	text-align: center;
 }
 
@@ -59,9 +59,6 @@ footer {
 
 main {
 	flex: 1;
-}
-
-main {
 	top: 34%;
 	//background-color: lightyellow;
 	text-align: center;
@@ -74,20 +71,28 @@ main button {
   margin: .1em;
   background-color: transparent;
   border-radius: 33%;
+  //border-color: #eee;
+  border: 1px solid #ccc;
 }
 
 footer button {
-  width: 1.6em;
+  width: 1.8em;
   height: 1.2em;
-  font-size: 1.5em;
-  margin: .1em;
+  font-size: 1.7em;
+  //margin: .1em;
   background-color: transparent;
   border: none;
+  color: purple;
 }
 
 #boTxt1, #boTxt2 {
 	text-transform: uppercase;
 	font-size: 0.8em;
+}
+
+#boTxt1 {
+	color: purple;
+	font-weight: bold;
 }
 
 img {
