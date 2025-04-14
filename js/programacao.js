@@ -12,7 +12,7 @@
 	var htmlP = [ // incluso appinventor
 // invisíveis
 "header main footer","nav section article aside",
-"div span","link",
+"div span",
 // Wordpress - UI - texto
 "dl dt dd","i em mark",
 "a abbr cite",
@@ -40,7 +40,7 @@
 	var htmlR = [
 // invisíveis
 "cabeçalho, principal, rodapé","navegação, seção, artigo, a parte (de lado)",
-"divisão (division), palmo/período/pequena distância","ligação",
+"divisão (division), palmo/período/pequena distância",
 // Wordpress - UI - texto
 "lista de descrição (description list), ?, descrição (description)","itálico (italic), enfatizado (emphasized), marcado (marked)",
 "âncora/hiperlink (anchor), abreviação (abbreviation), citar (título de uma obra)",
@@ -106,17 +106,17 @@
 	var html2P = [		// head
 "!DOCTYPE html",
 "head body","style",
-"meta link script",
+"meta script",
 "base",
-"title",
+"title link",
 ];
 
 	var html2R = [
 "",
 "cabeça, corpo","estilo",
-"metadados (metadata), ligação, script",
+"metadados (metadata), script",
 "",
-"título",
+"título; ligação ",
 ];
 
 	var html2RReEx = [	// UPDATE - ESTE CAMPO NÂo EXISTE
