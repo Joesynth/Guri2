@@ -9,19 +9,20 @@
 
 
 // HTML, CSS, JS.
-
 	var htmlP = [ // incluso appinventor
 // invisíveis
 "header main footer","nav section article aside",
 "div span","link",
 // Wordpress - UI - texto
-"dl dt dd","i","a",
-"h1...h6 p","strong b blockquote","br",
+"dl dt dd","i em mark",
+"a abbr cite",
+"h1...h6 p","strong b blockquote",
 "ul ol li",
-"del ins","sub sup",
-"em mark",
+"del ins","small sup sub",
 "pre code var kbd samp",
-"address","abbr cite","small",
+"address",
+// Wordpress - empty element - elementos vazios
+"br hr",
 // table
 "table caption tr td th",
 "colgroup col",
@@ -30,39 +31,44 @@
 // media
 "map area","source","object param","embed",
 // other
-"keygen","time","hr","q",
-"br hr embed source","track area col param wbr",
-"dfn","bdo",
+"keygen","time","q",
+"dfn, bdo",
+// empty element / elementos vazios
+"embed source","track area col param wbr",
 ];
-
 
 	var htmlR = [
 // invisíveis
 "cabeçalho, principal, rodapé","navegação, seção, artigo, a parte (de lado)",
 "divisão (division), palmo/período/pequena distância","ligação",
 // Wordpress - UI - texto
-"lista de descrição (description list), ?, descrição (description)","itálico (italic)","âncora/hiperlink (anchor)",
-"posições (headings) parágrafo (paragraph)","forte, negrito (bold), bloco de citação","quebrar/pausa (break)",
+"lista de descrição (description list), ?, descrição (description)","itálico (italic), enfatizado (emphasized), marcado (marked)",
+"âncora/hiperlink (anchor), abreviação (abbreviation), citar (título de uma obra)",
+"posições (headings) parágrafo (paragraph)","forte, negrito (bold), bloco de citação",
 "lista desordenada (unordered list), lista ordenada (ordered list), item da lista (list item)",
-"excluído (deleted) inserido (inserted)","subscrito (subscripted), sobrescrito (superscripted)",
-"enfatizado (emphasized), marcado (marked)",
+"excluído (deleted) inserido (inserted)","pequeno, sobrescrito (superscripted), subscrito (subscripted)",
 "pré-formatado (preformatted), código, variável (variable; é mostrado em itálico), teclado (keyboard), amostra (sample)",
-"endereço","abreviação (abbreviation), citar (título de uma obra)","pequeno",
+"endereço",
+// Wordpress - empty element - elementos vazios
+"quebrar/pausa (break); regra horizontal (horizontal rule);tags vazias",
 // table
+
 "tabela, título/subtítulo/legenda (de tabela), linha da tabela (table row), dados da tabela (table data), cabeçalho da tabela (table header)",
 "grupo de colunas (group of columns), coluna (column)",
 // UI não texto
 "elementos usados ​​para adicionar ícones",
 // media
-"mapa de imagem (image-map), área (ambas relativas à imagem)","fonte (mídia)","objeto parâmetro (parameter)","embutir (mídia)",
+"mapa de imagem (image-map), área (ambas relativas à imagem)","fonte (mídia)","objeto parâmetro (parameter)","embutir (mídia áudio/vídeo)",
 // other
-"par de chaves (pública-privada)","data hora (date-time)","regra horizontal (horizontal rule)","cotação (quotation) (citação curta)",
-"tags vazias, elementos vazios; empty element","tags vazias, elementos vazios, empty element",
-"definindo (defining)","bi-directional override",
+"par de chaves (pública-privada)","data hora (date-time)","cotação (quotation) (citação curta)",
+"definindo (defining), bi-directional override",
+// empty element / elementos vazios
+"tags vazias","tags vazias",
 ];
 
 
 
+/*
 	var htmlRReEx = [	// UPDATE - CAMPO RESPOSTA EXPLICATIVA N CRIADO
 "","","","","","",
 "","","","","",
@@ -76,8 +82,8 @@
 
 "","","",
 "","","","",
-
-"","","","termo/nome em uma lista de descrição (term; term/name in a description list)",
+"","","","termo/nome em uma lista de descrição (term; term/name 
+"par de chaves (pública-privada)","data hora (date-time)","regra horizontal (horizontal rule)in a description list)",
 "","","","","","",
 "","","","",
 "",
@@ -91,7 +97,7 @@
 "","",
 "","","",
 ];
-
+*/
 
 
 
@@ -99,15 +105,17 @@
 
 	var html2P = [		// head
 "!DOCTYPE html",
-"head body","style script","meta",
-"link","base",
+"head body","style",
+"meta link script",
+"base",
 "title",
 ];
 
 	var html2R = [
 "",
-"cabeça, corpo","estilo, script","metadados (metadata)",
-"ligação","",
+"cabeça, corpo","estilo",
+"metadados (metadata), ligação, script",
+"",
 "título",
 ];
 
